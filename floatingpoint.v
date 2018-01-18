@@ -41,30 +41,23 @@ module countZerosExtractData(
 	reg leadingZeroes;
 	
 	always @(*) begin
-		if(d[11]==0) begin
-			if(d[10]==0) begin
-				if(d[9]==0) begin
-					if(d[8]==0) begin
-						if(d[7]==0) begin
-							if(d[6]==0) begin
-								if(d[5]==0) begin
-									if(d[4]==0) begin
-										i=3;
-									end
-									else i=4;
-								end
-								else i=5;
-							end
-							else i=6;
-						end
-						else i=7;
-					end
-					else i=8;
-				end
-				else i=9;
-			end
-			else i=10;
-		end
+		if (d[10]==1)
+			i=10;
+		else if (d[9]==1)
+			i=9;
+		else if (d[8]==1)
+			i=8;
+		else if (d[7]==1)
+			i=7;
+		else if (d[6]==1)
+			i=6;
+		else if (d[5]==1)
+			i=5;
+		else if (d[4]==1)
+			i=4;
+		else
+			i=3;
+		
 		leadingZeroes	= 11-i;
 		exponent = 8-leadingZeroes;
 
