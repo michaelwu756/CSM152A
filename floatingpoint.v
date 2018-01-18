@@ -115,11 +115,11 @@ module combinedComb(
 	countZerosExtractData cZ_2 (smag, exponent,significand,fifthBit);
 	round r_3( exponent,significand,fifthBit, exp_alpha, significand_alpha);
 
-assign exp = (smag[10:7] == 4'b1111) ? 
-	3'b111 : ((d[11]==1 && d[10:0] ==0) ? 
-	3'b111 : exp_alpha);
-assign sig = (smag[10:7] == 4'b1111) ? 
-	4'b1111 : ((d[11]==1 && d[10:0] ==0) ? 
-	4'b1111 : significand_alpha);
+	assign exp = (smag[10:7] == 4'b1111) ? 
+		3'b111 : ((d[11]==1 && d[10:0] ==0) ? 
+		3'b111 : exp_alpha);
+	assign sig = (smag[10:7] == 4'b1111) ? 
+		4'b1111 : ((d[11]==1 && d[10:0] ==0) ? 
+		4'b1111 : significand_alpha);
 
 endmodule
