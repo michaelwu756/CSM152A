@@ -37,8 +37,8 @@ module countZerosExtractData(
 	output reg [3:0] significand,
 	output reg fifthBit
 );
-	reg i;
-	reg leadingZeroes;
+	reg [3:0] i;
+	reg [3:0] leadingZeros;
 	
 	always @(*) begin
 		if (d[10]==1)
@@ -58,8 +58,8 @@ module countZerosExtractData(
 		else
 			i=3;
 		
-		leadingZeroes	= 11-i;
-		exponent = 8-leadingZeroes;
+		leadingZeros = 11-i;
+		exponent = 8-leadingZeros;
 
 		significand[3] = d[i];
 		significand[2] = d[i-1];
