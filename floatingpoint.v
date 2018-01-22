@@ -26,7 +26,7 @@ module signMagnitude(
 );
 
 	assign sign = (d[11]==1'b1) ? 1'b1 : 1'b0;
-	assign out = (d[11]==1'b1) ? d[11:0] : ~d[11:0] + 1'b1;
+	assign out = (d[11]==1'b0) ? d[11:0] : ~d[11:0] + 1'b1;
 
 endmodule
 
