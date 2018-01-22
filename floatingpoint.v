@@ -26,7 +26,7 @@ module signMagnitude(
 );
 
 	assign sign = (d[11]==1'b1) ? 1'b1 : 1'b0;
-	assign out = (d[11]==1'b0) ? d[11:0] : ~d[11:0] + 1'b1;
+	assign out = (d[11]==1'b0) ? d[11:0] : ~d[11:0] + 12'b1;
 
 endmodule
 
@@ -88,10 +88,10 @@ module round(
 		if (fifthBit == 1'b1) begin
 			if (significand == 4'b1111) begin
 				significand_out = 4'b1000;
-				exponent_out = exponent + 1'b1;
+				exponent_out = exponent + 3'b001;
 			end
 			else
-				significand_out = significand + 1'b1;
+				significand_out = significand + 4'b0001;
 		end	
 	end
 
@@ -109,7 +109,9 @@ module combinedComb(
 
 	wire [11:0] smag;
 	wire [2:0] exponent;
+	wire [2:0] exp_alpha;
 	wire [3:0] significand;
+	wire [3:0] significand_alpha;
 	wire fifthBit;
 	signMagnitude sM_1 ( d, sign, smag);
 	countZerosExtractData cZ_2 (smag, exponent,significand,fifthBit);
