@@ -100,7 +100,7 @@ endmodule
 // edge cases -- every thing is all 1's
 // everything is all 0's
 
-module combinedComb(
+module FPCVT(
 	input wire [11:0]  d,
 	output wire sign,
 	output wire [2:0] exp,
