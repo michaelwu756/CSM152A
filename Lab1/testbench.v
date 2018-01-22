@@ -36,7 +36,7 @@ module testbench;
 	wire [3:0] sig;
 
 	// Instantiate the Unit Under Test (UUT)
-	combinedComb uut (
+	FPCVT uut (
 		.d(d), 
 		.sign(sign), 
 		.exp(exp), 
