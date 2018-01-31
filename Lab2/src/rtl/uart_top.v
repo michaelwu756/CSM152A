@@ -52,7 +52,7 @@ module uart_top (/*AUTOARG*/
          stIdle:
            if (i_tx_stb)
              begin
-                state   <= stNib1;
+                state   <= stR;
                 tx_data <= i_tx_data;
              end
          stCR:
