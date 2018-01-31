@@ -61,7 +61,8 @@ module uart_top (/*AUTOARG*/
            if (~tfifo_full)
              begin
                 state   <= state + 1;
-                tx_data <= {tx_data,4'b0000};
+                if(state>stCol)
+                   tx_data <= {tx_data,4'b0000};
              end
        endcase // case (state)
 

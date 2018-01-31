@@ -14,7 +14,7 @@ module model_uart(/*AUTOARG*/
    parameter bittime = 1000000000/baud;
    parameter name    = "UART0";
    
-   reg [31:0] fullData;
+   reg [55:0] fullData;
    reg [7:0] rxData;
    event     evBit;
    event     evByte;
