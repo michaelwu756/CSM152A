@@ -2,7 +2,7 @@ module uart_top (/*AUTOARG*/
    // Outputs
    o_tx, o_tx_busy, o_rx_data, o_rx_valid,
    // Inputs
-   i_rx, i_tx_data, i_tx_stb, clk, rst
+   i_rx, i_tx_data, i_tx_stb, i_reg_num, clk, rst
    );
 
 `include "seq_definitions.v"
@@ -16,7 +16,7 @@ module uart_top (/*AUTOARG*/
    
    input [seq_dp_width-1:0] i_tx_data;
    input                    i_tx_stb;
-   
+   input [seq_rn_width-1:0] i_reg_num;
    input                    clk;
    input                    rst;
 
@@ -92,7 +92,7 @@ module uart_top (/*AUTOARG*/
    always @*
      case (state)
        stR:     tfifo_in = "R";
-       stReg:   tfifo_in = "6";
+       stReg:   tfifo_in = fnNib2ASCII(i_reg_num);
        stCol:   tfifo_in = ":";
        stNL:    tfifo_in = "\n";
        stCR:    tfifo_in = "\r";

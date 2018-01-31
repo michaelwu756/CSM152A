@@ -141,6 +141,7 @@ module nexys3 (/*AUTOARG*/
                        .i_rx            (RsRx),
                        .i_tx_data       (seq_tx_data[seq_dp_width-1:0]),
                        .i_tx_stb        (seq_tx_valid),
+                       .i_reg_num       (inst_wd[seq_in_width-seq_op_width-1:seq_in_width-seq_op_width-seq_rn_width]),
                        /*AUTOINST*/
                        // Inputs
                        .clk             (clk),
