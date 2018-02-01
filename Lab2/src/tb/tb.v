@@ -16,6 +16,9 @@ module tb;
    wire [7:0]           led;                    // From uut_ of nexys3.v
    // End of automatics
 
+   reg [9:0] contents [1023:0];
+   reg [9:0] num_lines;
+   reg [7:0] line;
    initial
      begin
         //$shm_open  ("dump", , ,1);
@@ -27,15 +30,14 @@ module tb;
         #1000 btnR = 0;
         #1500000;
         
-        tskRunPUSH(0,4);
-        tskRunPUSH(0,0);
-        tskRunPUSH(1,3);
-        tskRunMULT(0,1,2);
-        tskRunADD(2,0,3);
-        tskRunSEND(0);
-        tskRunSEND(1);
-        tskRunSEND(2);
-        tskRunSEND(3);
+        // Read from file
+        $readmemb("seq.code", contents);
+        num_lines = contents[0];
+        for (i = 1; i <= num_lines; i = i + 1) begin
+            line = contents[i];
+            readLine(line);
+            $display("%b", line);
+        end
         
         #1000;        
         $finish;
@@ -63,6 +65,21 @@ module tb;
                 .btnS                   (btnS),
                 .btnR                   (btnR),
                 .clk                    (clk));
+
+    task readLine;
+        input [7:0] line;
+           // Travers through the insn lines
+        begin
+        if (line[7] == 0 && line[6] == 0)
+            tskRunPUSH(line[5:4], line[3:0]);
+        else if (line[7] == 0 && line[6] == 1)
+            tskRunADD(line[5:4], line[3:2], line[1:0]);
+        else if (line[7] == 1 && line[6] == 0)
+            tskRunMULT(line[5:4], line[3:2], line[1:0]);
+        else
+            tskRunSEND(line[5:4]);
+         end
+     endtask
 
    task tskRunInst;
       input [7:0] inst;
