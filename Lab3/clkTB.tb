@@ -1,0 +1,27 @@
+// Code your testbench here
+// or browse Examples
+//parameters 
+`timescale 1ns / 1ps
+
+module tb();
+  
+  wire clk, clk_1, clk_2, clk_2p5, clk_100;
+  reg pause;
+  initial pause = 0;
+  clock_gen clock_gen(clk);
+  clkModule clkA(clk, pause, clk_1, clk_2, clk_2p5, clk_100);
+  
+  initial
+  begin
+    $monitor("1 %b, 2 %b, 2.5 %b, 100 %b", clk_1, clk_2, clk_2p5, clk_100);
+  end
+  
+endmodule
+  
+  module clock_gen(clk);
+    parameter half_period = 1;
+    output clk;
+    reg clk;
+    initial clk = 1;
+    always #half_period clk = ~clk;
+  endmodule
