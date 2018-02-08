@@ -47,9 +47,9 @@ module nexys3 (/*AUTOARG*/
      else
        arst_ff <= {1'b0, arst_ff[1]};
 
-   wire clk, clk_1, clk_2, clk_2p5, clk_400;
+   wire clk, clk_1, clk_2, clk_2p5, clk_500;
 
-   clkModule clkA(clk, pause, clk_1, clk_2, clk_2p5, clk_400);
+   clkModule clkA(clk, pause, clk_1, clk_2, clk_2p5, clk_500);
 
    // ===========================================================================
    // Instruction Stepping Control / Debouncing
@@ -61,7 +61,7 @@ module nexys3 (/*AUTOARG*/
           inst_wd[7:0] <= 0;
           step_d[2:0]  <= 0;
        end
-     else if (clk_400) // Down sampling
+     else if (clk_500) // Down sampling
        begin
           inst_wd[7:0] <= sw[7:0];
           step_d[2:0]  <= {btnS, step_d[2:1]};
@@ -94,7 +94,7 @@ module nexys3 (/*AUTOARG*/
             seconds <= seconds + 1;
       end
 
-   always @ (posedge clk_400)
+   always @ (posedge clk_500)
       if (rst)
          begin
             enable_led   <= 4'b1110;
