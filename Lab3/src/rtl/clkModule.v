@@ -32,6 +32,7 @@ module clk500(clk, pause, clk_500);
   
   parameter MASTER_FREQ = 28'd100000000;
   parameter TARGET_500 = MASTER_FREQ/500;
+  //parameter TARGET_500 = 2;
  
   reg [27:0] counter500 = 1;
   
