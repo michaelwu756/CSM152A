@@ -102,7 +102,7 @@ module nexys3 (/*AUTOARG*/
 	endtask
 	
 	task convertToDisplay;
-		reg digit_val;
+		reg [3:0] digit_val;
 		begin
 			case (display_digit)
 				0: begin enable_led = 4'b1110; digit_val=digit0; end
