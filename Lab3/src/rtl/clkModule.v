@@ -1,5 +1,5 @@
-module clkModule(clk,pause,clk_1, clk_2, clk_2p5, clk_500);
-  input clk, pause;
+module clkModule(clk,clk_1, clk_2, clk_2p5, clk_500);
+  input clk;
   output clk_1, clk_2, clk_2p5, clk_500;
   
   parameter TARGET_2 = 250;
@@ -7,7 +7,7 @@ module clkModule(clk,pause,clk_1, clk_2, clk_2p5, clk_500);
   parameter TARGET_1 = 500;
   
   // Use 100Hz clock as clock divider
-  clk500 secondaryClk(clk, pause, clk_500);
+  clk500 secondaryClk(clk, clk_500);
   reg [7:0] counter2 = 1;
   reg [7:0] counter2p5 = 1;
   reg [8:0] counter1 = 1;
@@ -26,8 +26,8 @@ module clkModule(clk,pause,clk_1, clk_2, clk_2p5, clk_500);
 
 endmodule
 
-module clk500(clk, pause, clk_500);
-  input clk, pause;
+module clk500(clk, clk_500);
+  input clk;
   output clk_500;
   
   parameter MASTER_FREQ = 28'd100000000;
@@ -38,15 +38,13 @@ module clk500(clk, pause, clk_500);
   
   always @(posedge clk)
   begin
-    if(!pause) begin
       if(counter500 == TARGET_500)
         counter500 = 28'd1;
-     else
+      else
         counter500 = counter500+1;
-    end
   end
   
-  assign clk_500 = (counter500 == TARGET_500  && clk) ? 1 : 0;
+  assign clk_500 = (counter500 == TARGET_500) ? 1 : 0;
 endmodule
 
 

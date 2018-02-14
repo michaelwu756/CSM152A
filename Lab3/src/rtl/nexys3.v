@@ -51,7 +51,7 @@ module nexys3 (/*AUTOARG*/
 
    wire clk, clk_1, clk_2, clk_2p5, clk_500;
 
-   clkModule clkA(clk, pause, clk_1, clk_2, clk_2p5, clk_500);
+   clkModule clkA(clk, clk_1, clk_2, clk_2p5, clk_500);
 
    // ===========================================================================
    // Instruction Stepping Control / Debouncing
@@ -128,47 +128,38 @@ module nexys3 (/*AUTOARG*/
    always @ (posedge clk)
      if (rst)
        begin
-          inst_wd[7:0] <= 0;
-          step_d[2:0]  <= 0;
+			digit3 = 0;
+         digit2 = 0;
+         digit1 = 0;
+         digit0 = 0;
+		   display_val = display_0;
+			enable_led = 4'b0000;
+			display_digit = 0;
+			inst_wd[7:0] <= 0;
+			step_d[2:0]  <= 0;
        end
-     else if (clk_500) // Down sampling
-       begin
-          inst_wd[7:0] <= sw[7:0];
-          step_d[2:0]  <= {btnS, step_d[2:1]};
-       end
-
-   always @ (posedge clk_1)
-      if (rst)
-         begin
-            digit3 = 0;
-            digit2 = 0;
-            digit1 = 0;
-            digit0 = 0;
-         end
-      else 
-         incrementDigit0();
-
-   always @ (posedge clk_500)
-		if (rst)
+     else begin
+			if (clk_500) // Down sampling
 			begin
-				display_val=display_0;
-				enable_led=4'b0000;
-				display_digit=0;
-			end
-		else
-			begin
+				inst_wd[7:0] <= sw[7:0];
+				step_d[2:0]  <= {btnS, step_d[2:1]};
 				convertToDisplay();	
-				display_digit=display_digit+1;
-			end 
+				display_digit = display_digit+1;
+			end
+			if (clk_1 && !pause)
+			begin
+				incrementDigit0();
+			end
+		end
 
    // Detecting posedge of btnS
    wire is_btnS_posedge;
    assign is_btnS_posedge = ~ step_d[0] & step_d[1];
    always @ (posedge clk)
      if (rst)
-       pause <= 0;
+       pause = 0;
      else if (is_btnS_posedge)
-       pause <= !pause;
+       pause = !pause;
 
    assign an[3:0] = enable_led[3:0];
    assign seg = display_val;

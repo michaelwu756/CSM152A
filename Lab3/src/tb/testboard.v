@@ -30,17 +30,22 @@ module testboard;
 		clk = 0; 
 		counter=0;
 
-		// Wait 100 ns for global reset to finish
-		#500000;
-      while (counter<4000) begin
+		// Wait for global reset to finish
+		#250000;
+      while (counter<4) begin
 			counter=counter+1;
 			clk=~clk;
-			#500000;
+			#250000;
 		end
 		btnR=0;
 		while (1) begin
+			counter=counter+1;
+			if(counter==1000)
+				btnS=1;
+			if(counter==2000)
+				btnS=0;
 			clk=~clk;
-			#5;
+			#250000;
 		end
 		// Add stimulus here
 

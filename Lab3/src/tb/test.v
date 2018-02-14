@@ -3,7 +3,6 @@ module test;
 
 	// Inputs
 	reg clk;
-	reg pause;
 
 	// Outputs
 	wire clk_1;
@@ -14,7 +13,6 @@ module test;
 	// Instantiate the Unit Under Test (UUT)
 	clkModule uut (
 		.clk(clk),
-		.pause(pause),
 		.clk_1(clk_1),
 		.clk_2(clk_2),
 		.clk_2p5(clk_2p5),
