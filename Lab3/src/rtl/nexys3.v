@@ -57,6 +57,45 @@ module nexys3 (/*AUTOARG*/
    // Instruction Stepping Control / Debouncing
    // ===========================================================================
 	
+	task AincrementDigit0;
+		begin
+			if(digit0==9) begin
+				digit0=0;
+				end
+			else 
+				digit0=digit0+1;
+		end
+	endtask
+	
+	task AincrementDigit1;
+		begin
+			if(digit1==5) begin
+				digit1=0;
+				end
+			else 
+				digit1=digit1+1;
+		end
+	endtask
+	
+		
+	task AincrementDigit2;
+		begin
+			if(digit2==9) begin
+				digit2=0;
+				end
+			else 
+				digit2=digit2+1;
+		end
+	endtask
+
+	task AincrementDigit3;
+		begin
+			if(digit3==5) 
+				digit3=0;
+			else 
+				digit3=digit3+1;
+		end
+	endtask
 	
 	task incrementDigit0;
 		begin
@@ -150,6 +189,15 @@ module nexys3 (/*AUTOARG*/
 			begin
 				incrementDigit0();
 			end
+			if(clk_2 && sw[2])
+				if(!sw[0] && !sw[1])
+					AincrementDigit0();
+				else if (sw[0] && !sw[1])
+					AincrementDigit1();
+				else if (!sw[0] && sw[1])
+					AincrementDigit2();
+				else if (sw[0] && sw[1])
+					AincrementDigit3();
 		end
 
    // Detecting posedge of btnS
