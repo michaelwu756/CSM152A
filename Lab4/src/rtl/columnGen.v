@@ -1,23 +1,27 @@
-module columnGen(gameClk, reset, finished, Ainfo, Binfo) 
+module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By);
   input gameClk, reset, finished;
-  output Ainfo, Binfo;
-  
-  // Ainfo -- 0: x-offset, 1: gap height
-  wire [9:0] Ainfo [1:0];
-  wire [9:0] Binfo [1:0];
-  
-  always @(posedge gameClk) begin     
+  output Ax, Ay, Bx, By;
+
+  // Ainfo -- 0: x-offset of RIGHT SIDE of COL, 1: y-coord of GAP CENTER
+  wire [9:0] Ax, Ay, Bx, By;
+
+  always @(posedge gameClk) begin
     // if first col of Ainfo is 0, generate new column
-    if (Ainfo[0] == 0) begin
-      Ainfo[0] = Binfo[0] - 1;
-      Ainfo[1] = Binfo[1];
-      Binfo[0] = DISPLAY_WIDTH - 1;
-      Binfo[1] = $urandom / (DISPLAY_HEIGHT - GAP_HEIGHT);
+    if (Ax == 0) begin
+      Ax <= DISPLAY_WIDTH + COL_WIDTH - 1;    //
+      Ay <= ($urandom % (DISPLAY_HEIGHT - 2*PADDING - GAP_HEIGHT)) + PADDING + GAP_HEIGHT/2;
+      Bx <= Bx - 1;
     end
-    else begin 
-      Ainfo[0] = Ainfo[0] + 1;
-      Binfo[0] = Binfo[0] + 1;
-    end    
+    // if first col of Binfo is 0, generate new column
+    else if (Bx == 0) begin
+      Bx <= DISPLAY_WIDTH + COL_WIDTH - 1;
+      By <= ($urandom % (DISPLAY_HEIGHT - 2*PADDING - GAP_HEIGHT)) + PADDING + GAP_HEIGHT/2;
+      Ax <= Ax - 1;
+    end
+    else begin
+      Ax <= Ax - 1;
+      Bx <= Bx - 1;
+    end
   end
-  
-endmodule 
+
+endmodule
