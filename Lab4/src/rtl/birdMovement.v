@@ -1,5 +1,4 @@
-`timescale 1ns / 1ps
-module bridMovement(
+module birdMovement(
     input gameClk,
     input [9:0] y_in,
     input signed [4:0] v_in,
@@ -9,6 +8,9 @@ module bridMovement(
     output [9:0] y_out,
     output signed [5:0] v_out
     );
+
+  reg [9:0] y_out;
+  reg signed [5:0] v_out;
 
 parameter ACCEL = 3;
 parameter MAX_VELOCITY = 30;
