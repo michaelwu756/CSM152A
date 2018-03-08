@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module NERP_demo_top(
 	input wire clk,			//master clock = 50MHz
-	input wire clr,			//right-most pushbutton for reset
+	input wire btnR,			//right-most pushbutton for reset
+	input wire btnC,
 	output wire [6:0] seg,	//7-segment display LEDs
 	output wire [3:0] an,	//7-segment display anode enable
 	output wire dp,			//7-segment display decimal point
@@ -30,7 +31,7 @@ module NERP_demo_top(
 	output wire hsync,		//horizontal sync out
 	output wire vsync			//vertical sync out
 	);
-
+`include "constants.v"
 // 7-segment clock interconnect
 wire segclk;
 
@@ -40,10 +41,15 @@ wire dclk;
 // disable the 7-segment decimal points
 assign dp = 1;
 
+
+wire [10:0] bird_v;
+
+wire [10:0] bird_y;
+
 // generate 7-segment clock & display clock
 clockdiv U1(
 	.clk(clk),
-	.clr(clr),
+	.clr(btnR),
 	.segclk(segclk),
 	.dclk(dclk)
 	);
@@ -51,15 +57,21 @@ clockdiv U1(
 // 7-segment display controller
 segdisplay U2(
 	.segclk(segclk),
-	.clr(clr),
+	.clr(btnR),
 	.seg(seg),
 	.an(an)
 	);
 
+
 // VGA controller
 vga640x480 U3(
 	.dclk(dclk),
-	.clr(clr),
+	.clr(btnR),
+	.bird_y(bird_y),
+	/*.pipe1_x(pipe1_x),
+	.pipe2_x(pipe2_x),
+	.pipe1_y(pipe1_y),
+	.pipe2_y(pipe2_y),*/
 	.hsync(hsync),
 	.vsync(vsync),
 	.red(red),
@@ -67,4 +79,12 @@ vga640x480 U3(
 	.blue(blue)
 	);
 
+birdMovement bm(
+	 .gameClk(segclk),
+    .button(btnC),
+    .reset(btnR),
+    .finished(0),
+    .y_out(bird_y),
+	 .v_out(bird_v)
+);
 endmodule
