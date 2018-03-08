@@ -7,8 +7,11 @@ parameter bird_height=10;
 parameter ACCEL = 1;
 parameter MAX_VELOCITY = 30;
 parameter Y_INIT = 200;
-parameter SCREEN_HEIGHT=640;
-parameter SCREEN_WIDTH=480;
+parameter SCREEN_HEIGHT=480;
+parameter SCREEN_WIDTH=640;
+parameter COL_WIDTH = 20;
+parameter GAP_HEIGHT = 100;
+parameter PADDING = 20;
 
 // video structure constants
 parameter hpixels = 800;// horizontal pixels per line

@@ -2,11 +2,11 @@
 module vga640x480(
 	input wire dclk,			//pixel clock: 25MHz
 	input wire clr,			//asynchronous reset
-	input wire [10:0] bird_y,/*
+	input wire [10:0] bird_y,
 	input wire [10:0] pipe1_x,
 	input wire [10:0] pipe1_y,
 	input wire [10:0] pipe2_x,
-	input wire [10:0] pipe2_y,*/
+	input wire [10:0] pipe2_y,
 	output wire hsync,		//horizontal sync out
 	output wire vsync,		//vertical sync out
 	output reg [2:0] red,	//red vga output
@@ -70,12 +70,12 @@ assign vsync = (vc < vpulse) ? 0:1;
 // is automatically included in the sensitivty list.  In this case, it would be
 // equivalent to the following: always @(hc, vc)
 // Assignment statements can only be used on type "reg" and should be of the "blocking" type: =
-
+/*
 reg [10:0] pipe1_x = 600;
 reg [10:0] pipe1_y = 200;
 reg [10:0] pipe2_x = 300;
 reg [10:0] pipe2_y = 200;
-
+*/
 wire [10:0] pipe1_min_x;
 wire [10:0] pipe1_max_x;
 wire [10:0] pipe1_min_y; 

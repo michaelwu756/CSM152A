@@ -44,6 +44,12 @@ assign dp = 1;
 
 wire [10:0] bird_v;
 
+wire finished;
+wire [10:0] pipe1_x;
+wire [10:0] pipe1_y;
+wire [10:0] pipe2_x;
+wire [10:0] pipe2_y;
+wire passColumn;
 wire [10:0] bird_y;
 
 // generate 7-segment clock & display clock
@@ -68,10 +74,10 @@ vga640x480 U3(
 	.dclk(dclk),
 	.clr(btnR),
 	.bird_y(bird_y),
-	/*.pipe1_x(pipe1_x),
+	.pipe1_x(pipe1_x),
 	.pipe2_x(pipe2_x),
 	.pipe1_y(pipe1_y),
-	.pipe2_y(pipe2_y),*/
+	.pipe2_y(pipe2_y),
 	.hsync(hsync),
 	.vsync(vsync),
 	.red(red),
@@ -87,4 +93,14 @@ birdMovement bm(
     .y_out(bird_y),
 	 .v_out(bird_v)
 );
+
+columnGen cg(.gameClk(segclk), 
+.reset(btnR),
+.finished(finished),
+.Ax(pipe1_x), 
+.Ay(pipe1_y),
+.Bx(pipe2_x),
+.By(pipe2_y),
+.passColumn(passColumn));
+
 endmodule
