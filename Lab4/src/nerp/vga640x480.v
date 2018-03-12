@@ -104,15 +104,22 @@ assign bird_min_y = bird_y - bird_height + vbp;
 assign bird_max_y = bird_y + bird_height + vbp;
 
 wire [9:0] vcinverse;
-assign vcinverse = vlines-1-vc;
+assign vcinverse = vfp-1-vc;
 
 always @(*)
 begin
 	// first check if we're within vertical active video range
 	if (vc >= vbp && vc < vfp)
 	begin
+	//border
+		if (hc==hbp || hc==hfp-1 || vcinverse==vbp || vcinverse==vfp-1)
+		begin
+			red = 3'b101;
+			green = 3'b011;
+			blue = 2'b10;
+		end
 	//display bird
-		if (hc >=bird_min_x && hc < bird_max_x && 
+		else if (hc >=bird_min_x && hc < bird_max_x &&
 		vcinverse >= bird_min_y && vcinverse < bird_max_y )
 		begin
 			red = 3'b111;
