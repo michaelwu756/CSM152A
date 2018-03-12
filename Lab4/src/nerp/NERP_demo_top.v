@@ -18,7 +18,7 @@ wire segclk;
 
 // VGA display clock interconnect
 wire dclk;
-
+wire gameclk;
 // disable the 7-segment decimal points
 assign dp = 1;
 
@@ -52,7 +52,8 @@ clockdiv U1(
 	.clk(clk),
 	.clr(btnR),
 	.segclk(segclk),
-	.dclk(dclk)
+	.dclk(dclk),
+    .gameclk(gameclk)
 	);
 
 // 7-segment display controller
@@ -81,7 +82,7 @@ vga640x480 U3(
 	);
 
 birdMovement bm(
-	.gameClk(segclk),
+	.gameClk(gameclk),
 	.button(btnCClicked),
 	.reset(btnR),
 	.finished(0),
@@ -89,7 +90,7 @@ birdMovement bm(
 	.v_out(bird_v)
 );
 
-columnGen cg(.gameClk(segclk),
+columnGen cg(.gameClk(gameclk),
 .reset(btnR),
 .finished(finished),
 .Ax(pipe1_x),
