@@ -4,8 +4,8 @@ parameter bird_x=100;
 parameter bird_width=10;
 parameter bird_height=10;
 
-parameter ACCEL = 1;
-parameter MAX_VELOCITY = 10;
+parameter ACCEL = 4;
+parameter MAX_VELOCITY = 256;
 parameter Y_INIT = 200;
 parameter SCREEN_HEIGHT=480;
 parameter SCREEN_WIDTH=640;
