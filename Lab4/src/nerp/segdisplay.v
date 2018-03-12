@@ -66,7 +66,7 @@ begin
 		case(state)
 			left:
 			begin
-				case (wmidleft)
+				case (wleft)
                     1: seg<=display_1;
                     2: seg<=display_2;
                     3: seg<=display_3;
@@ -83,7 +83,7 @@ begin
 			end
 			midleft:
 			begin
-				case (wmidright)
+				case (wmidleft)
                     1: seg<=display_1;
                     2: seg<=display_2;
                     3: seg<=display_3;
@@ -100,7 +100,7 @@ begin
 			end
 			midright:
 			begin
-				case (wright)
+				case (wmidright)
                     1: seg<=display_1;
                     2: seg<=display_2;
                     3: seg<=display_3;
@@ -117,7 +117,7 @@ begin
 			end
 			right:
 			begin
-				case (wleft)
+				case (wright)
                     1: seg<=display_1;
                     2: seg<=display_2;
                     3: seg<=display_3;
