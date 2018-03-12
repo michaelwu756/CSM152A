@@ -1,36 +1,39 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    20:56:56 03/19/2013 
-// Design Name: 
-// Module Name:    segdisplay 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Company:
+// Engineer:
 //
-// Dependencies: 
+// Create Date:    20:56:56 03/19/2013
+// Design Name:
+// Module Name:    segdisplay
+// Project Name:
+// Target Devices:
+// Tool versions:
+// Description:
 //
-// Revision: 
+// Dependencies:
+//
+// Revision:
 // Revision 0.01 - File Created
-// Additional Comments: 
+// Additional Comments:
 //
 //////////////////////////////////////////////////////////////////////////////////
 module segdisplay(
 	input wire segclk,		//7-segment clock
+    input wire [9:0] score,      //7-segment clock
 	input wire clr,			//asynchronous reset
 	output reg [6:0] seg,	//7-segment display LEDs
 	output reg [3:0] an		//7-segment display anode enable
 	);
+`include "constants.v"
+
+wire wleft = score % 10;
+wire wmidleft = score % 100 - score % 10;
+wire wmidright = score % 1000 - score % 100;
+wire wright = score % 10000 - score % 1000;
+
 
 // constants for displaying letters on display
-parameter N = 7'b1001000;
-parameter E = 7'b0000110;
-parameter R = 7'b1001100;
-parameter P = 7'b0001100;
-
 // Finite State Machine (FSM) states
 parameter left = 2'b00;
 parameter midleft = 2'b01;
@@ -59,25 +62,69 @@ begin
 		case(state)
 			left:
 			begin
-				seg <= N;
+				case (wmidleft)
+                    1: seg<=display_1;
+                    2: seg<=display_2;
+                    3: seg<=display_3;
+                    4: seg<=display_4;
+                    5: seg<=display_5;
+                    6: seg<=display_6;
+                    7: seg<=display_7;
+                    8: seg<=display_8;
+                    9: seg<=display_9;
+                    0: seg<=display_0;
+                 endcase
 				an <= 4'b0111;
 				state <= midleft;
 			end
 			midleft:
 			begin
-				seg <= E;
+				case (wmidright)
+                    1: seg<=display_1;
+                    2: seg<=display_2;
+                    3: seg<=display_3;
+                    4: seg<=display_4;
+                    5: seg<=display_5;
+                    6: seg<=display_6;
+                    7: seg<=display_7;
+                    8: seg<=display_8;
+                    9: seg<=display_9;
+                    0: seg<=display_0;
+                 endcase
 				an <= 4'b1011;
 				state <= midright;
 			end
 			midright:
 			begin
-				seg <= R;
+				case (wright)
+                    1: seg<=display_1;
+                    2: seg<=display_2;
+                    3: seg<=display_3;
+                    4: seg<=display_4;
+                    5: seg<=display_5;
+                    6: seg<=display_6;
+                    7: seg<=display_7;
+                    8: seg<=display_8;
+                    9: seg<=display_9;
+                    0: seg<=display_0;
+                 endcase
 				an <= 4'b1101;
 				state <= right;
 			end
 			right:
 			begin
-				seg <= P;
+				case (wleft)
+                    1: seg<=display_1;
+                    2: seg<=display_2;
+                    3: seg<=display_3;
+                    4: seg<=display_4;
+                    5: seg<=display_5;
+                    6: seg<=display_6;
+                    7: seg<=display_7;
+                    8: seg<=display_8;
+                    9: seg<=display_9;
+                    0: seg<=display_0;
+                 endcase
 				an <= 4'b1110;
 				state <= left;
 			end
