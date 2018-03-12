@@ -27,7 +27,8 @@ reg btnCClicked;
 
 wire [10:0] bird_v;
 
-wire finished;
+reg finished;
+wire hitColumn;
 wire [10:0] pipe1_x;
 wire [10:0] pipe1_y;
 wire [10:0] pipe2_x;
@@ -40,9 +41,12 @@ always @ (posedge gameclk or posedge btnR)
 		begin
 			btnCDownSample <= 0;
 			btnCClicked <=0;
+			finished <=0;
 		end
 	else
 		begin
+			if(hitColumn)
+				finished<=1;
 			btnCClicked<=btnC&!btnCDownSample;
 			btnCDownSample<=btnC;
 		end
@@ -86,18 +90,29 @@ birdMovement bm(
 	.gameClk(gameclk),
 	.button(btnCClicked),
 	.reset(btnR),
-	.finished(0),
+	.finished(finished),
 	.y_out(bird_y),
 	.v_out(bird_v)
 );
 
 columnGen cg(.gameClk(gameclk),
-.reset(btnR),
-.finished(finished),
-.Ax(pipe1_x),
-.Ay(pipe1_y),
-.Bx(pipe2_x),
-.By(pipe2_y),
-.passColumn(passColumn));
+	.reset(btnR),
+	.finished(finished),
+	.Ax(pipe1_x),
+	.Ay(pipe1_y),
+	.Bx(pipe2_x),
+	.By(pipe2_y),
+	.passColumn(passColumn)
+);
+
+collisionDetection(
+	.gameClk(gameclk),
+   .Ax(pipe1_x),
+	.Ay(pipe1_y),
+	.Bx(pipe2_x),
+	.By(pipe2_y),
+   .y_in(bird_y),
+	.hitColumn(hitColumn)
+);
 
 endmodule
