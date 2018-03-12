@@ -142,9 +142,9 @@ begin
 			blue = 2'b00;
 		end
 		else begin
-			red = 0;
-			green = 0;
-			blue = 0;
+			red = 3'b000;
+			green = 31b000;
+			blue = 2'b11;
 		end
 	end
 	// we're outside active vertical range so display black
