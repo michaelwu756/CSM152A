@@ -33,6 +33,7 @@ wire [10:0] pipe1_y;
 wire [10:0] pipe2_x;
 wire [10:0] pipe2_y;
 wire passColumn;
+wire hitColumn;
 wire [10:0] bird_y;
 
 always @ (posedge gameclk or posedge btnR)
@@ -99,5 +100,14 @@ columnGen cg(.gameClk(gameclk),
 .Bx(pipe2_x),
 .By(pipe2_y),
 .passColumn(passColumn));
+
+collisionDetection cd(.gameClk(gameclk),
+.Ax(pipe1_x),
+.Ay(pipe1_y),
+.Bx(pipe2_x),
+.By(pipe2_y),
+.y_in(bird_y),
+.hitColumn(finished)
+);
 
 endmodule
