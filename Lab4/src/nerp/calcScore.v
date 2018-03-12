@@ -5,7 +5,7 @@ module calcScore(input game_clk,
 
   reg [9:0] score_out;
 
-  always @ (posedge game_clk) begin
+  always @ (posedge game_clk or posedge reset) begin
     if (reset)
       score_out <= 0;
     else

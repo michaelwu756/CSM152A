@@ -114,6 +114,7 @@ collisionDetection cd(
 	.Bx(pipe2_x),
 	.By(pipe2_y),
    .y_in(bird_y),
+	.reset(btnR),
 	.hitColumn(hitColumn)
 );
 
