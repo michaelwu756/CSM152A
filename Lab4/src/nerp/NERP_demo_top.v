@@ -105,7 +105,7 @@ columnGen cg(.gameClk(gameclk),
 	.passColumn(passColumn)
 );
 
-collisionDetection(
+collisionDetection cd(
 	.gameClk(gameclk),
    .Ax(pipe1_x),
 	.Ay(pipe1_y),
