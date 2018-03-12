@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    20:28:25 03/19/2013 
-// Design Name: 
-// Module Name:    NERP_demo_top 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 module NERP_demo_top(
 	input wire clk,			//master clock = 50MHz
 	input wire btnR,			//right-most pushbutton for reset
@@ -41,6 +22,8 @@ wire dclk;
 // disable the 7-segment decimal points
 assign dp = 1;
 
+reg btnCDownSample;
+reg btnCClicked;
 
 wire [10:0] bird_v;
 
@@ -51,6 +34,18 @@ wire [10:0] pipe2_x;
 wire [10:0] pipe2_y;
 wire passColumn;
 wire [10:0] bird_y;
+
+always @ (posedge segclk or posedge btnR)
+	if (btnR)
+		begin
+			btnCDownSample <= 0;
+			btnCClicked <=0;
+		end
+	else
+		begin
+			btnCClicked<=btnC&!btnCDownSample;
+			btnCDownSample<=btnC;
+		end
 
 // generate 7-segment clock & display clock
 clockdiv U1(
@@ -86,18 +81,18 @@ vga640x480 U3(
 	);
 
 birdMovement bm(
-	 .gameClk(segclk),
-    .button(btnC),
-    .reset(btnR),
-    .finished(0),
-    .y_out(bird_y),
-	 .v_out(bird_v)
+	.gameClk(segclk),
+	.button(btnCClicked),
+	.reset(btnR),
+	.finished(0),
+	.y_out(bird_y),
+	.v_out(bird_v)
 );
 
-columnGen cg(.gameClk(segclk), 
+columnGen cg(.gameClk(segclk),
 .reset(btnR),
 .finished(finished),
-.Ax(pipe1_x), 
+.Ax(pipe1_x),
 .Ay(pipe1_y),
 .Bx(pipe2_x),
 .By(pipe2_y),
