@@ -10,6 +10,7 @@ parameter Y_INIT = 200;
 parameter SCREEN_HEIGHT=480;
 parameter SCREEN_WIDTH=640;
 parameter PADDING = 20;
+parameter DELAY = 500;
 
 // video structure constants
 parameter hpixels = 800;// horizontal pixels per line
