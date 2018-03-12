@@ -35,7 +35,7 @@ wire [10:0] pipe2_y;
 wire passColumn;
 wire [10:0] bird_y;
 
-always @ (posedge segclk or posedge btnR)
+always @ (posedge gameclk or posedge btnR)
 	if (btnR)
 		begin
 			btnCDownSample <= 0;
@@ -51,9 +51,10 @@ always @ (posedge segclk or posedge btnR)
 clockdiv U1(
 	.clk(clk),
 	.clr(btnR),
+	.score(0),
 	.segclk(segclk),
 	.dclk(dclk),
-    .gameclk(gameclk)
+   .gameclk(gameclk)
 	);
 
 // 7-segment display controller
