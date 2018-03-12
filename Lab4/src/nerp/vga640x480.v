@@ -103,24 +103,21 @@ assign bird_max_x = bird_x + bird_width + hbp;
 assign bird_min_y = bird_y - bird_height + vbp;
 assign bird_max_y = bird_y + bird_height + vbp;
 
-wire [9:0] vcinverse;
-assign vcinverse = vfp-1-vc;
-
 always @(*)
 begin
 	// first check if we're within vertical active video range
-	if (vc >= vbp && vc < vfp)
+	if (vc >= vbp && vc < vfp && hc >= hbp && hc < hfp)
 	begin
 	//border
-		if (hc==hbp || hc==hfp-1 || vcinverse==vbp || vcinverse==vfp-1)
+		if (hc==hbp || hc==hfp-1 || vc==vbp || vc==vfp-1)
 		begin
-			red = 3'b101;
-			green = 3'b011;
-			blue = 2'b10;
+			red = 3'b111;
+			green = 3'b000;
+			blue = 2'b00;
 		end
 	//display bird
 		else if (hc >=bird_min_x && hc < bird_max_x &&
-		vcinverse >= bird_min_y && vcinverse < bird_max_y )
+		vc >= bird_min_y && vc < bird_max_y )
 		begin
 			red = 3'b111;
 			green = 3'b111;
@@ -128,21 +125,21 @@ begin
 		end
 		//display pipes
 		else if (hc >= pipe1_min_x && hc < pipe1_max_x && 
-		!(vcinverse >= pipe1_min_y && vcinverse < pipe1_max_y) )
+		!(vc >= pipe1_min_y && vc < pipe1_max_y) )
 		begin
 			red = 3'b000;
 			green = 3'b111;
 			blue = 2'b00;
 		end
 		else if (hc >= pipe2_min_x && hc < pipe2_max_x && 
-		!(vcinverse >= pipe2_min_y && vcinverse < pipe2_max_y) )
+		!(vc >= pipe2_min_y && vc < pipe2_max_y) )
 		begin
 			red = 3'b000;
 			green = 3'b111;
 			blue = 2'b00;
 		end
 		else begin
-			red = 3'b000;
+			red = 3'b111;
 			green = 3'b000;
 			blue = 2'b11;
 		end
