@@ -143,7 +143,7 @@ begin
 		end
 		else begin
 			red = 3'b000;
-			green = 31b000;
+			green = 3'b000;
 			blue = 2'b11;
 		end
 	end
