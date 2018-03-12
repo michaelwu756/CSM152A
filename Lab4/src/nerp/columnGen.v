@@ -14,24 +14,27 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 
   always @(posedge gameClk or posedge reset) begin
 	 if (reset) begin
-		Ax <= SCREEN_WIDTH/2 + pipe_width*2 - 1;    //
-      //Ay <= ($urandom % (SCREEN_HEIGHT - 2*PADDING - 2*pipe_height_gap)) + PADDING + pipe_height_gap;
-		Ay <= 200;
+		Ax <= SCREEN_WIDTH/2 + pipe_width*2 - 1;
+
+        Ay <= SCREEN_HEIGHT/2 + $random % ((SCREEN_HEIGHT-PADDING)/2);
+		//Ay <= 200;
 		Bx <= SCREEN_WIDTH + pipe_width*2 - 1;
-      //By <= ($urandom % (SCREEN_HEIGHT - 2*PADDING - 2*pipe_height_gap)) + PADDING + pipe_height_gap;
-		By <= 230;
+
+
+        By <= SCREEN_HEIGHT/2 + $random % ((SCREEN_HEIGHT-PADDING)/2);
 	 end
 	 // if first col of Ainfo is 0, generate new column
     else if (Ax == 0) begin
       Ax <= SCREEN_WIDTH + pipe_width*2 - 1;    //
-      //Ay <= ($urandom % (SCREEN_HEIGHT - 2*PADDING - 2*pipe_height_gap)) + PADDING + pipe_height_gap;
-      Bx <= Bx - 1;
+
+        Ay <= SCREEN_HEIGHT/2 + $random % ((SCREEN_HEIGHT-PADDING)/2);
+        Bx <= Bx - 1;
       passColumn <= 1;
     end
     // if first col of Binfo is 0, generate new column
     else if (Bx == 0) begin
       Bx <= SCREEN_WIDTH + pipe_width*2 - 1;
-      //By <= ($urandom % (SCREEN_HEIGHT - 2*PADDING - 2*pipe_height_gap)) + PADDING + pipe_height_gap;
+      By <= SCREEN_HEIGHT/2 + $random % ((SCREEN_HEIGHT-PADDING)/2);
       Ax <= Ax - 1;
       passColumn <= 1;
     end
