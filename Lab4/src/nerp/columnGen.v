@@ -9,10 +9,10 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
   output reg passColumn;
 
   // Ainfo -- 0: x-offset of RIGHT SIDE of COL, 1: y-coord of GAP CENTER
-  reg [31:0] random;
+  wire [31:0] random;
 
   //GARO rng(0, gameClk, reset, random);
-  fibonacci_lfsr_nbit(gameClk, reset, random);
+  fibonacci_lfsr_nbit rng(gameClk, reset, random);
 
   always @(posedge gameClk or posedge reset) begin
 	 if (reset) begin
@@ -54,19 +54,18 @@ module fibonacci_lfsr_nbit   #(parameter BITS = 32)   (
     );
 
    reg [31:0] data_next;
-   always_comb begin
+   always @* begin
       data_next = data;
       repeat(BITS) begin
          data_next = {(data_next[31]^data_next[1]), data_next[31:1]};
       end
    end
 
-   always_ff @(posedge clk or negedge reset) begin
+   always @(posedge clk or negedge rst_n) begin
       if(!rst_n)
          data <= 32'h1f;
       else
          data <= data_next;
-      end
    end
 
 endmodule
