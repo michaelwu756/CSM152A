@@ -21,6 +21,7 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 			Bx <= SCREEN_WIDTH + pipe_width*2 - 1;
 			By <= PADDING+pipe_height_gap+(2*random)%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
 			delay<=DELAY;
+			passColumn<=0;
 		end
 		else if (!finished) begin
 			if(delay!=0)
