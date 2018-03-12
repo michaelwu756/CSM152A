@@ -10,7 +10,7 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 
   // Ainfo -- 0: x-offset of RIGHT SIDE of COL, 1: y-coord of GAP CENTER
   wire [15:0] random;
-  lfsr rng(gameClk, reset, random);
+  lfsr rng(gameClk, 0, random);
 
 	reg [14:0] delay = DELAY;
 	always @(posedge gameClk or posedge reset) begin

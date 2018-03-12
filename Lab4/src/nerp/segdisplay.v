@@ -20,18 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 module segdisplay(
 	input wire segclk,		//7-segment clock
-    input wire [9:0] score,      //7-segment clock
+	input wire [9:0] score,
 	input wire clr,			//asynchronous reset
 	output reg [6:0] seg,	//7-segment display LEDs
 	output reg [3:0] an		//7-segment display anode enable
 	);
 `include "constants.v"
 
-wire wleft = score % 10;
-wire wmidleft = score % 100 - score % 10;
-wire wmidright = score % 1000 - score % 100;
-wire wright = score % 10000 - score % 1000;
+wire [3:0] wleft;
+wire [3:0] wmidleft;
+wire [3:0] wmidright;
+wire [3:0] wright;
 
+assign wleft=score/1000;
+assign wmidleft=(score%1000-score%100)/100;
+assign wmidright=(score%100-score%10)/10;
+assign wright=score%10;
 
 // constants for displaying letters on display
 // Finite State Machine (FSM) states

@@ -1,6 +1,5 @@
 module calcScore(input game_clk,
                  input reset,
-                 input [9:0] score_in,
                  input passColumn,
                  output [9:0] score_out);
 
@@ -10,7 +9,7 @@ module calcScore(input game_clk,
     if (reset)
       score_out <= 0;
     else
-      score_out <= passColumn ? score_in+1 : score_in;
+      score_out <= passColumn ? score_out+1 : score_out;
   end
 
 endmodule
