@@ -53,7 +53,7 @@ always @ (posedge gameclk or posedge btnR)
 // generate 7-segment clock & display clock
 clockdiv clocks(
    .clk(clk),
-   .score(0),
+   .score(score),
    .clr(btnR),
    .segclk(segclk),
    .dclk(dclk),
@@ -63,8 +63,8 @@ clockdiv clocks(
 // 7-segment display controller
 segdisplay segdisp(
    .segclk(segclk),
-   .clr(btnR),
    .score(score),
+   .clr(btnR),
    .seg(seg),
    .an(an)
 );
@@ -93,7 +93,8 @@ birdMovement bm(
    .y_out(bird_y)
 );
 
-columnGen cg(.gameClk(gameclk),
+columnGen cg(
+   .gameClk(gameclk),
    .reset(btnR),
    .finished(finished),
    .Ax(pipe1_x),

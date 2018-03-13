@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 module clockdiv(
    input wire clk,      //master clock: 100MHz
-   input wire clr,      //asynchronous reset
    input wire [9:0] score,
+   input wire clr,      //asynchronous reset
    output wire dclk,    //pixel clock: 25MHz
    output wire segclk,  //7-segment clock: 381.47Hz
    output wire gameclk  //Scaling clock: 200Hz+
