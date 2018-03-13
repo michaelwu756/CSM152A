@@ -35,7 +35,7 @@ always @(posedge gameClk or posedge reset) begin
    end
    else if (!finished) begin
       if(delay != 0)
-         delay <= delay-1;
+         delay <= delay - 1;
       else begin
          if (Ax == bird_x || Bx == bird_x)
             passColumn <= 1;
