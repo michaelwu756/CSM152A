@@ -2,9 +2,9 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 
   `include "constants.v"
   input gameClk, reset, finished;
-  output reg [10:0] Ax = SCREEN_WIDTH/2 + pipe_width*2 - 1;
+  output reg [10:0] Ax = SCREEN_WIDTH/2;
   output reg [10:0] Ay = PADDING+pipe_height_gap+624%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
-  output reg [10:0] Bx = SCREEN_WIDTH + pipe_width*2 - 1;
+  output reg [10:0] Bx = SCREEN_WIDTH + pipe_width;
   output reg [10:0] By = PADDING+pipe_height_gap+(2*624)%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
   output reg passColumn;
 
@@ -15,10 +15,10 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 	reg [14:0] delay = DELAY;
 	always @(posedge gameClk or posedge reset) begin
 		if (reset) begin
-			Ax <= SCREEN_WIDTH/2 + pipe_width*2 - 1;
+			Ax <= SCREEN_WIDTH/2;
 			Ay <= PADDING+pipe_height_gap+random%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
 
-			Bx <= SCREEN_WIDTH + pipe_width*2 - 1;
+			Bx <= SCREEN_WIDTH + pipe_width;
 			By <= PADDING+pipe_height_gap+(2*random)%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
 			delay<=DELAY;
 			passColumn<=0;
@@ -32,14 +32,14 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 				else
 					passColumn<=0;
 				// if first col of Ainfo is 0, generate new column
-				if (Ax == 0) begin
-					Ax <= SCREEN_WIDTH + pipe_width*2 - 1;    //
+				if (Ax == -pipe_width) begin
+					Ax <= SCREEN_WIDTH + pipe_width;
 					Ay <= PADDING+pipe_height_gap+random%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
 					Bx <= Bx - 1;
 				end
 				// if first col of Binfo is 0, generate new column
-				else if (Bx == 0) begin
-					Bx <= SCREEN_WIDTH + pipe_width*2 - 1;
+				else if (Bx == -pipe_width) begin
+					Bx <= SCREEN_WIDTH + pipe_width;
 					By <= PADDING+pipe_height_gap+random%(SCREEN_HEIGHT-2*(PADDING+pipe_height_gap));
 					Ax <= Ax - 1;
 				end
