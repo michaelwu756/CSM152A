@@ -27,7 +27,6 @@ parameter VFP = 511;    // beginning of vertical front porch
 // active horizontal video is therefore: 784 - 144 = 640
 // active vertical video is therefore: 511 - 31 = 480
 
-
 // constants for displaying letters on 7-segment display
 parameter SEG_LEFT = 2'b00;
 parameter SEG_MIDLEFT = 2'b01;

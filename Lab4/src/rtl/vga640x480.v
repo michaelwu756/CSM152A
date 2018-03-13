@@ -55,8 +55,8 @@ end
 // ----------------
 // "assign" statements are a quick way to
 // give values to variables of type: wire
-assign hsync = (hc < HPULSE) ? 0:1;
-assign vsync = (vc < VPULSE) ? 0:1;
+assign hsync = (hc < HPULSE) ? 0 : 1;
+assign vsync = (vc < VPULSE) ? 0 : 1;
 
 // display 100% saturation colorbars
 // ------------------------
@@ -111,13 +111,13 @@ always @(*) begin
          blue = 2'b11;
       end
       //display pipes
-      else if (hc >= pipe1_min_x && hc < pipe1_max_x && 
+      else if (hc >= pipe1_min_x && hc < pipe1_max_x &&
             !(vc >= pipe1_min_y && vc < pipe1_max_y)) begin
          red = 3'b000;
          green = 3'b111;
          blue = 2'b00;
       end
-      else if (hc >= pipe2_min_x && hc < pipe2_max_x && 
+      else if (hc >= pipe2_min_x && hc < pipe2_max_x &&
             !(vc >= pipe2_min_y && vc < pipe2_max_y)) begin
          red = 3'b000;
          green = 3'b111;
