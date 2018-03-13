@@ -28,9 +28,9 @@ module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
 				delay<=delay-1;
 			else begin
 				if (Ax == bird_x || Bx == bird_x)
-                                        passColumn<=1;
-                                else
-                                        passColumn<=0;
+					passColumn<=1;
+				else
+					passColumn<=0;
 				// if first col of Ainfo is 0, generate new column
 				if (Ax == 0) begin
 					Ax <= SCREEN_WIDTH + pipe_width*2 - 1;    //
