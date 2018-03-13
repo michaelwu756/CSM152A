@@ -27,7 +27,7 @@ always @(posedge clk or posedge clr) begin
    // increment counter by one
    else begin
       q <= q + 1;
-      if(gc == target - constant*score)
+      if(gc >= target - constant*score)
          gc <= 0;
       else
          gc <= gc + 1;
