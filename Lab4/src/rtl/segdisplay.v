@@ -19,13 +19,6 @@ assign wmidleft = (score%1000 - score%100)/100;
 assign wmidright = (score%100 - score%10)/10;
 assign wright = score%10;
 
-// constants for displaying letters on display
-// Finite State Machine (FSM) states
-parameter left = 2'b00;
-parameter midleft = 2'b01;
-parameter midright = 2'b10;
-parameter right = 2'b11;
-
 // state register
 reg [1:0] state;
 
@@ -37,13 +30,13 @@ always @(posedge segclk or posedge clr) begin
    if (clr == 1) begin
       seg <= 7'b1111111;
       an <= 7'b1111;
-      state <= left;
+      state <= SEG_LEFT;
    end
    // display the character for the current position
    // and then move to the next state
    else begin
       case(state)
-         left: begin
+         SEG_LEFT: begin
             case (wleft)
                1: seg <= DISPLAY_1;
                2: seg <= DISPLAY_2;
@@ -57,9 +50,9 @@ always @(posedge segclk or posedge clr) begin
                0: seg <= DISPLAY_0;
             endcase
             an <= 4'b0111;
-            state <= midleft;
+            state <= SEG_MIDLEFT;
          end
-         midleft: begin
+         SEG_MIDLEFT: begin
             case (wmidleft)
                1: seg<=DISPLAY_1;
                2: seg<=DISPLAY_2;
@@ -73,9 +66,9 @@ always @(posedge segclk or posedge clr) begin
                0: seg<=DISPLAY_0;
             endcase
             an <= 4'b1011;
-            state <= midright;
+            state <= SEG_MIDRIGHT;
          end
-         midright: begin
+         SEG_MIDRIGHT: begin
             case (wmidright)
                1: seg <= DISPLAY_1;
                2: seg <= DISPLAY_2;
@@ -89,9 +82,9 @@ always @(posedge segclk or posedge clr) begin
                0: seg <= DISPLAY_0;
             endcase
             an <= 4'b1101;
-            state <= right;
+            state <= SEG_RIGHT;
          end
-         right: begin
+         SEG_RIGHT: begin
             case (wright)
                1: seg <= DISPLAY_1;
                2: seg <= DISPLAY_2;
@@ -105,7 +98,7 @@ always @(posedge segclk or posedge clr) begin
                0: seg <= DISPLAY_0;
             endcase
             an <= 4'b1110;
-            state <= left;
+            state <= SEG_LEFT;
          end
       endcase
    end

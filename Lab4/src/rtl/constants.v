@@ -12,6 +12,9 @@ parameter SCREEN_WIDTH = 640;
 parameter PADDING = 20;
 parameter DELAY = 500;
 
+parameter GC_TARGET = 500000;
+parameter GC_SCALING_CONSTANT = 500;
+
 // video structure constants
 parameter HPIXELS = 800;// horizontal pixels per line
 parameter VLINES = 521; // vertical lines per frame
@@ -24,6 +27,13 @@ parameter VFP = 511;    // beginning of vertical front porch
 // active horizontal video is therefore: 784 - 144 = 640
 // active vertical video is therefore: 511 - 31 = 480
 
+
+// constants for displaying letters on 7-segment display
+parameter SEG_LEFT = 2'b00;
+parameter SEG_MIDLEFT = 2'b01;
+parameter SEG_MIDRIGHT = 2'b10;
+parameter SEG_RIGHT = 2'b11;
+
 parameter DISPLAY_0 = 7'b1000000;
 parameter DISPLAY_1 = 7'b1111001;
 parameter DISPLAY_2 = 7'b0100100;
@@ -34,6 +44,3 @@ parameter DISPLAY_6 = 7'b0000010;
 parameter DISPLAY_7 = 7'b1111000;
 parameter DISPLAY_8 = 7'b0000000;
 parameter DISPLAY_9 = 7'b0010000;
-
-parameter GC_TARGET = 500000;
-parameter GC_SCALING_CONSTANT = 500;
