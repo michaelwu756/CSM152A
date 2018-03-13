@@ -1,4 +1,4 @@
-parameter PIPE_WIDTHhpi = 25;
+parameter PIPE_WIDTH = 25;
 parameter PIPE_HEIGHT_GAP = 90;
 parameter BIRD_X = 100;
 parameter BIRD_WIDTH = 10;
@@ -34,3 +34,6 @@ parameter DISPLAY_6 = 7'b0000010;
 parameter DISPLAY_7 = 7'b1111000;
 parameter DISPLAY_8 = 7'b0000000;
 parameter DISPLAY_9 = 7'b0010000;
+
+parameter GC_TARGET = 500000;
+parameter GC_SCALING_CONSTANT = 500;
