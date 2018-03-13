@@ -35,7 +35,7 @@ wire [10:0] pipe2_x;
 wire [10:0] pipe2_y;
 wire passColumn;
 wire [10:0] bird_y;
-//wire [9:0] score;
+wire [9:0] score;
 
 always @ (posedge gameclk or posedge btnR)
 	if (btnR)
@@ -66,7 +66,7 @@ clockdiv U1(
 segdisplay U2(
 	.segclk(segclk),
 	.clr(btnR),
-	.score(0),
+	.score(score),
 	.seg(seg),
 	.an(an)
 	);
@@ -118,11 +118,11 @@ collisionDetection cd(
 	.hitColumn(hitColumn)
 );
 
-/*calcScore cs(
+calcScore cs(
 	.game_clk(gameclk),
 	.reset(btnR),
 	.passColumn(passColumn),
 	.score_out(score)
-);*/
+);
 
 endmodule
