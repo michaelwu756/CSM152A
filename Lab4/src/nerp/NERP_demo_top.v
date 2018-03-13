@@ -34,7 +34,6 @@ wire [10:0] pipe1_y;
 wire [10:0] pipe2_x;
 wire [10:0] pipe2_y;
 wire passColumn;
-wire hitColumn;
 wire [10:0] bird_y;
 //wire [9:0] score;
 

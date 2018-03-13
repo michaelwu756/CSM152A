@@ -25,7 +25,7 @@ module collisionDetection(
 		if (reset)
 			hitColumn<=0;
 		else begin
-			if (bird_y==bird_height)
+			if (y_in==bird_height)
 				hitColumn <=1;
 			else if ((bird_x-bird_width > Aleft && bird_x-bird_width < Aright) || (bird_x+bird_width > Aleft && bird_x+bird_width < Aright)) begin
 				if (y_in+bird_height > Atop || y_in-bird_height < Abottom)
