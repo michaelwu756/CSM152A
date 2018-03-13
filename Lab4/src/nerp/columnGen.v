@@ -55,7 +55,8 @@ endmodule
 module lfsr(input clk, reset, output reg [15:0] q);
   always @(posedge clk or posedge reset) begin
     if (reset)
-      q <= 16'b1001100001010100; // can be anything except zero
+      if (q==0)
+        q <= 16'b1001100001010100; // can be anything except zero
     else
       q <= {q[14:0], q[7] ^ q[5] ^ q[4] ^ q[3]}; // polynomial for maximal LFSR
   end
