@@ -1,8 +1,8 @@
 parameter PIPE_WIDTH = 25;
 parameter PIPE_HEIGHT_GAP = 90;
 parameter BIRD_X = 100;
-parameter BIRD_WIDTH = 10;
-parameter BIRD_HEIGHT = 10;
+parameter BIRD_WIDTH = 9;
+parameter BIRD_HEIGHT = 6;
 
 parameter ACCEL = 2;
 parameter MAX_VELOCITY = 64;
