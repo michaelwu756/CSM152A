@@ -104,11 +104,720 @@ always @(*) begin
          blue = 2'b00;
       end
       //display bird
-      else if (hc >= bird_min_x && hc < bird_max_x &&
-            vc >= bird_min_y && vc < bird_max_y ) begin
-         red = 3'b111;
-         green = 3'b111;
-         blue = 2'b11;
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 0) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 0) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 0) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 0) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 0) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 0) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 1) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 1) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 1) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 1) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 1) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 1) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 1) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 1) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 1) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 2) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 2) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 2) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 2) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 2) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 2) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 2) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 2) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 2) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 2) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 2) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 3) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 3) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 3) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 3) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 3) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 3) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 3) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 3) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 4) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 4) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 4) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 4) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 4) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 4) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 4) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 4) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 4) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 5) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 5) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 5) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 5) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 5) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 5) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 5) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 5) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 6) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 6) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 6) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 6) begin
+         red = WHITE_R;
+         green = WHITE_G;
+         blue = WHITE_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 6) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 6) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 6) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 6) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 6) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 6) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 7) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 7) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 7) begin
+         red = YELLOW1_R;
+         green = YELLOW1_G;
+         blue = YELLOW1_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 7) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 7) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 7) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 7) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 7) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 7) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 7) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 8) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 8) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 8) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 8) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 8) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 8) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 9) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 9) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 9) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 9) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 9) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 9) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 9) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 9) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 9) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 9) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 9) begin
+         red = ORANGE_R;
+         green = ORANGE_G;
+         blue = ORANGE_B;
+      end
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 9) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 10) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 10) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 10) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 10) begin
+         red = YELLOW2_R;
+         green = YELLOW2_G;
+         blue = YELLOW2_B;
+      end
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 10) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 11) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 11) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 11) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
+      end
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 11) begin
+         red = BLACK_R;
+         green = BLACK_G;
+         blue = BLACK_B;
       end
       //display pipes
       else if (hc >= pipe1_min_x && hc < pipe1_max_x &&
@@ -131,9 +840,9 @@ always @(*) begin
    end
    // we're outside active vertical range so display black
    else begin
-      red = 0;
-      green = 0;
-      blue = 0;
+      red = BLACK_R;
+      green = BLACK_G;
+      blue = BLACK_B;
    end
 end
 
