@@ -18,7 +18,6 @@ initial begin
    By = PADDING + PIPE_HEIGHT_GAP + (2*624)%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
 end
 
-// Ainfo -- 0: x-offset of RIGHT SIDE of COL, 1: y-coord of GAP CENTER
 wire [15:0] random;
 lfsr rng(gameClk, reset, random);
 
