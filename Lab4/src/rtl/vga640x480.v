@@ -98,7 +98,7 @@ always @(*) begin
    // first check if we're within vertical active video range
    if (vc >= vbp && vc < vfp && hc >= hbp && hc < hfp) begin
       //border
-      if (hc == hbp || hc == hfp-1 || vc == vbp || vc == vfp-1) begin
+      if (hc == hbp || hc == hfp - 1 || vc == vbp || vc == vfp - 1) begin
          red = 3'b111;
          green = 3'b000;
          blue = 2'b00;

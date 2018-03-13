@@ -30,7 +30,7 @@ always @(posedge gameClk or posedge reset) begin
       if (y_in == bird_height)
          hitColumn <= 1;
       else if ((bird_x - bird_width > Aleft && bird_x - bird_width < Aright) ||
-            (bird_x+bird_width > Aleft && bird_x+bird_width < Aright)) begin
+            (bird_x + bird_width > Aleft && bird_x + bird_width < Aright)) begin
          if (y_in + bird_height > Atop || y_in - bird_height < Abottom)
             hitColumn <= 1;
       end
