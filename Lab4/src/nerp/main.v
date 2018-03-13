@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module NERP_demo_top(
+module main(
 	input wire clk,			//master clock = 50MHz
 	input wire btnR,			//right-most pushbutton for reset
 	input wire btnC,
@@ -53,17 +53,17 @@ always @ (posedge gameclk or posedge btnR)
 		end
 
 // generate 7-segment clock & display clock
-clockdiv U1(
+clockdiv clocks(
 	.clk(clk),
 	.score(0),
 	.clr(btnR),
 	.segclk(segclk),
 	.dclk(dclk),
-   .gameclk(gameclk)
+	.gameclk(gameclk)
 	);
 
 // 7-segment display controller
-segdisplay U2(
+segdisplay segdisp(
 	.segclk(segclk),
 	.clr(btnR),
 	.score(score),
@@ -73,7 +73,7 @@ segdisplay U2(
 
 
 // VGA controller
-vga640x480 U3(
+vga640x480 vga(
 	.dclk(dclk),
 	.clr(btnR),
 	.bird_y(SCREEN_HEIGHT-bird_y),
@@ -109,11 +109,11 @@ columnGen cg(.gameClk(gameclk),
 
 collisionDetection cd(
 	.gameClk(gameclk),
-   .Ax(pipe1_x),
+	.Ax(pipe1_x),
 	.Ay(pipe1_y),
 	.Bx(pipe2_x),
 	.By(pipe2_y),
-   .y_in(bird_y),
+	.y_in(bird_y),
 	.reset(btnR),
 	.hitColumn(hitColumn)
 );
