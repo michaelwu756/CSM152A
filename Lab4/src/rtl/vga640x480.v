@@ -35,7 +35,7 @@ always @(posedge dclk or posedge clr) begin
    end
    else begin
       // keep counting until the end of the line
-      if (hc < hpixels - 1)
+      if (hc < HPIXELS - 1)
          hc <= hc + 1;
       else begin
          // When we hit the end of the line, reset the horizontal
@@ -43,7 +43,7 @@ always @(posedge dclk or posedge clr) begin
          // If vertical counter is at the end of the frame, then
          // reset that one too.
          hc <= 0;
-         if (vc < vlines - 1)
+         if (vc < VLINES - 1)
             vc <= vc + 1;
          else
             vc <= 0;
@@ -55,8 +55,8 @@ end
 // ----------------
 // "assign" statements are a quick way to
 // give values to variables of type: wire
-assign hsync = (hc < hpulse) ? 0:1;
-assign vsync = (vc < vpulse) ? 0:1;
+assign hsync = (hc < HPULSE) ? 0:1;
+assign vsync = (vc < VPULSE) ? 0:1;
 
 // display 100% saturation colorbars
 // ------------------------
@@ -71,34 +71,34 @@ wire [10:0] pipe1_min_x;
 wire [10:0] pipe1_max_x;
 wire [10:0] pipe1_min_y; 
 wire [10:0] pipe1_max_y;
-assign pipe1_min_x = pipe1_x - pipe_width + hbp;
-assign pipe1_max_x = pipe1_x + pipe_width + hbp;
-assign pipe1_min_y = pipe1_y - pipe_height_gap + vbp;
-assign pipe1_max_y = pipe1_y + pipe_height_gap + vbp;
+assign pipe1_min_x = pipe1_x - PIPE_WIDTH + HBP;
+assign pipe1_max_x = pipe1_x + PIPE_WIDTH + HBP;
+assign pipe1_min_y = pipe1_y - PIPE_HEIGHT_GAP + VBP;
+assign pipe1_max_y = pipe1_y + PIPE_HEIGHT_GAP + VBP;
 
 wire [10:0] pipe2_min_x;
 wire [10:0] pipe2_max_x;
 wire [10:0] pipe2_min_y; 
 wire [10:0] pipe2_max_y;
-assign pipe2_min_x = pipe2_x - pipe_width + hbp;
-assign pipe2_max_x = pipe2_x + pipe_width + hbp;
-assign pipe2_min_y = pipe2_y - pipe_height_gap + vbp;
-assign pipe2_max_y = pipe2_y + pipe_height_gap + vbp;
+assign pipe2_min_x = pipe2_x - PIPE_WIDTH + HBP;
+assign pipe2_max_x = pipe2_x + PIPE_WIDTH + HBP;
+assign pipe2_min_y = pipe2_y - PIPE_HEIGHT_GAP + VBP;
+assign pipe2_max_y = pipe2_y + PIPE_HEIGHT_GAP + VBP;
 
 wire [10:0] bird_min_x;
 wire [10:0] bird_max_x;
 wire [10:0] bird_min_y; 
 wire [10:0] bird_max_y;
-assign bird_min_x = bird_x - bird_width + hbp;
-assign bird_max_x = bird_x + bird_width + hbp;
-assign bird_min_y = bird_y - bird_height + vbp;
-assign bird_max_y = bird_y + bird_height + vbp;
+assign bird_min_x = BIRD_X - BIRD_WIDTH + HBP;
+assign bird_max_x = BIRD_X + BIRD_WIDTH + HBP;
+assign bird_min_y = bird_y - BIRD_HEIGHT + VBP;
+assign bird_max_y = bird_y + BIRD_HEIGHT + VBP;
 
 always @(*) begin
    // first check if we're within vertical active video range
-   if (vc >= vbp && vc < vfp && hc >= hbp && hc < hfp) begin
+   if (vc >= VBP && vc < VFP && hc >= HBP && hc < HFP) begin
       //border
-      if (hc == hbp || hc == hfp - 1 || vc == vbp || vc == vfp - 1) begin
+      if (hc == HBP || hc == HFP - 1 || vc == VBP || vc == VFP - 1) begin
          red = 3'b111;
          green = 3'b000;
          blue = 2'b00;

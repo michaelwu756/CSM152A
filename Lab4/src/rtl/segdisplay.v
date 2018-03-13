@@ -45,64 +45,64 @@ always @(posedge segclk or posedge clr) begin
       case(state)
          left: begin
             case (wleft)
-               1: seg <= display_1;
-               2: seg <= display_2;
-               3: seg <= display_3;
-               4: seg <= display_4;
-               5: seg <= display_5;
-               6: seg <= display_6;
-               7: seg <= display_7;
-               8: seg <= display_8;
-               9: seg <= display_9;
-               0: seg <= display_0;
+               1: seg <= DISPLAY_1;
+               2: seg <= DISPLAY_2;
+               3: seg <= DISPLAY_3;
+               4: seg <= DISPLAY_4;
+               5: seg <= DISPLAY_5;
+               6: seg <= DISPLAY_6;
+               7: seg <= DISPLAY_7;
+               8: seg <= DISPLAY_8;
+               9: seg <= DISPLAY_9;
+               0: seg <= DISPLAY_0;
             endcase
             an <= 4'b0111;
             state <= midleft;
          end
          midleft: begin
             case (wmidleft)
-               1: seg<=display_1;
-               2: seg<=display_2;
-               3: seg<=display_3;
-               4: seg<=display_4;
-               5: seg<=display_5;
-               6: seg<=display_6;
-               7: seg<=display_7;
-               8: seg<=display_8;
-               9: seg<=display_9;
-               0: seg<=display_0;
+               1: seg<=DISPLAY_1;
+               2: seg<=DISPLAY_2;
+               3: seg<=DISPLAY_3;
+               4: seg<=DISPLAY_4;
+               5: seg<=DISPLAY_5;
+               6: seg<=DISPLAY_6;
+               7: seg<=DISPLAY_7;
+               8: seg<=DISPLAY_8;
+               9: seg<=DISPLAY_9;
+               0: seg<=DISPLAY_0;
             endcase
             an <= 4'b1011;
             state <= midright;
          end
          midright: begin
             case (wmidright)
-               1: seg <= display_1;
-               2: seg <= display_2;
-               3: seg <= display_3;
-               4: seg <= display_4;
-               5: seg <= display_5;
-               6: seg <= display_6;
-               7: seg <= display_7;
-               8: seg <= display_8;
-               9: seg <= display_9;
-               0: seg <= display_0;
+               1: seg <= DISPLAY_1;
+               2: seg <= DISPLAY_2;
+               3: seg <= DISPLAY_3;
+               4: seg <= DISPLAY_4;
+               5: seg <= DISPLAY_5;
+               6: seg <= DISPLAY_6;
+               7: seg <= DISPLAY_7;
+               8: seg <= DISPLAY_8;
+               9: seg <= DISPLAY_9;
+               0: seg <= DISPLAY_0;
             endcase
             an <= 4'b1101;
             state <= right;
          end
          right: begin
             case (wright)
-               1: seg <= display_1;
-               2: seg <= display_2;
-               3: seg <= display_3;
-               4: seg <= display_4;
-               5: seg <= display_5;
-               6: seg <= display_6;
-               7: seg <= display_7;
-               8: seg <= display_8;
-               9: seg <= display_9;
-               0: seg <= display_0;
+               1: seg <= DISPLAY_1;
+               2: seg <= DISPLAY_2;
+               3: seg <= DISPLAY_3;
+               4: seg <= DISPLAY_4;
+               5: seg <= DISPLAY_5;
+               6: seg <= DISPLAY_6;
+               7: seg <= DISPLAY_7;
+               8: seg <= DISPLAY_8;
+               9: seg <= DISPLAY_9;
+               0: seg <= DISPLAY_0;
             endcase
             an <= 4'b1110;
             state <= left;

@@ -12,8 +12,8 @@ module clockdiv(
 reg [17:0] q;
 reg [32:0] gc;
 
-parameter target = 500000;
-parameter constant = 500;
+parameter TARGET = 500000;
+parameter CONSTANT = 500;
 
 // Clock divider --
 // Each bit in q is a clock signal that is
@@ -27,7 +27,7 @@ always @(posedge clk or posedge clr) begin
    // increment counter by one
    else begin
       q <= q + 1;
-      if(gc >= target - constant*score)
+      if(gc >= TARGET - CONSTANT*score)
          gc <= 0;
       else
          gc <= gc + 1;
@@ -36,7 +36,7 @@ end
 
 // 50Mhz ÷ 2^17 = 381.47Hz
 assign segclk = q[17];
-assign gameclk = gc == target - constant*score;
+assign gameclk = gc == TARGET - CONSTANT*score;
 // 50Mhz ÷ 2^1 = 25MHz
 assign dclk = q[1];
 

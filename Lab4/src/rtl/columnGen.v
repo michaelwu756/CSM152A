@@ -13,9 +13,9 @@ module columnGen(
 
 initial begin
    Ax = SCREEN_WIDTH/2;
-   Ay = PADDING + pipe_height_gap + 624%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
-   Bx = SCREEN_WIDTH + pipe_width;
-   By = PADDING + pipe_height_gap + (2*624)%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+   Ay = PADDING + PIPE_HEIGHT_GAP + 624%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
+   Bx = SCREEN_WIDTH + PIPE_WIDTH;
+   By = PADDING + PIPE_HEIGHT_GAP + (2*624)%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
 end
 
 // Ainfo -- 0: x-offset of RIGHT SIDE of COL, 1: y-coord of GAP CENTER
@@ -26,10 +26,10 @@ reg [14:0] delay = DELAY;
 always @(posedge gameClk or posedge reset) begin
    if (reset) begin
       Ax <= SCREEN_WIDTH/2;
-      Ay <= PADDING + pipe_height_gap + random%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+      Ay <= PADDING + PIPE_HEIGHT_GAP + random%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
 
-      Bx <= SCREEN_WIDTH + pipe_width;
-      By <= PADDING + pipe_height_gap + (2*random)%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+      Bx <= SCREEN_WIDTH + PIPE_WIDTH;
+      By <= PADDING + PIPE_HEIGHT_GAP + (2*random)%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
       delay <= DELAY;
       passColumn <= 0;
    end
@@ -37,20 +37,20 @@ always @(posedge gameClk or posedge reset) begin
       if(delay != 0)
          delay <= delay - 1;
       else begin
-         if (Ax == bird_x || Bx == bird_x)
+         if (Ax == BIRD_X || Bx == BIRD_X)
             passColumn <= 1;
          else
             passColumn <= 0;
          // if first col of Ainfo is 0, generate new column
-         if (Ax == -pipe_width) begin
-            Ax <= SCREEN_WIDTH + pipe_width;
-            Ay <= PADDING + pipe_height_gap + random%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+         if (Ax == -PIPE_WIDTH) begin
+            Ax <= SCREEN_WIDTH + PIPE_WIDTH;
+            Ay <= PADDING + PIPE_HEIGHT_GAP + random%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
             Bx <= Bx - 1;
          end
          // if first col of Binfo is 0, generate new column
-         else if (Bx == -pipe_width) begin
-            Bx <= SCREEN_WIDTH + pipe_width;
-            By <= PADDING + pipe_height_gap + random%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+         else if (Bx == -PIPE_WIDTH) begin
+            Bx <= SCREEN_WIDTH + PIPE_WIDTH;
+            By <= PADDING + PIPE_HEIGHT_GAP + random%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
             Ax <= Ax - 1;
          end
          else begin
