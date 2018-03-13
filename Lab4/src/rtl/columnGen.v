@@ -1,12 +1,22 @@
-module columnGen(gameClk, reset, finished, Ax, Ay, Bx, By, passColumn);
+module columnGen(
+   input wire gameClk,
+   input wire reset,
+   input wire finished,
+   output reg [10:0] Ax,
+   output reg [10:0] Ay,
+   output reg [10:0] Bx,
+   output reg [10:0] By,
+   output reg passColumn
+);
 
 `include "constants.v"
-input gameClk, reset, finished;
-output reg [10:0] Ax = SCREEN_WIDTH/2;
-output reg [10:0] Ay = PADDING + pipe_height_gap + 624%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
-output reg [10:0] Bx = SCREEN_WIDTH + pipe_width;
-output reg [10:0] By = PADDING + pipe_height_gap + (2*624)%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
-output reg passColumn;
+
+initial begin
+   Ax = SCREEN_WIDTH/2;
+   Ay = PADDING + pipe_height_gap + 624%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+   Bx = SCREEN_WIDTH + pipe_width;
+   By = PADDING + pipe_height_gap + (2*624)%(SCREEN_HEIGHT - 2*(PADDING + pipe_height_gap));
+end
 
 // Ainfo -- 0: x-offset of RIGHT SIDE of COL, 1: y-coord of GAP CENTER
 wire [15:0] random;
@@ -53,7 +63,11 @@ end
 
 endmodule
 
-module lfsr(input clk, reset, output reg [15:0] q);
+module lfsr(
+   input wire clk,
+   input wire reset,
+   output reg [15:0] q
+);
 
 always @(posedge clk or posedge reset) begin
    if (reset)

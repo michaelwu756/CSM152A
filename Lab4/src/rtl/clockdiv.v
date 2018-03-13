@@ -6,7 +6,7 @@ module clockdiv(
    output wire dclk,    //pixel clock: 25MHz
    output wire segclk,  //7-segment clock: 381.47Hz
    output wire gameclk  //7-segment clock: 381.47Hz
-   );
+);
 
 // 17-bit counter variable
 reg [17:0] q;

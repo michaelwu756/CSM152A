@@ -11,7 +11,7 @@ module main(
    output wire [1:0] blue, //blue vga output - 2 bits
    output wire hsync,      //horizontal sync out
    output wire vsync       //vertical sync out
-   );
+);
 
 `include "constants.v"
 

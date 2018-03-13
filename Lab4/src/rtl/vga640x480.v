@@ -12,7 +12,7 @@ module vga640x480(
    output reg [2:0] red,   //red vga output
    output reg [2:0] green, //green vga output
    output reg [1:0] blue   //blue vga output
-   );
+);
 
 `include "constants.v"
 

@@ -1,11 +1,11 @@
 module birdMovement(
-   input gameClk,
-   input button,
-   input reset,
-   input finished,
+   input wire gameClk,
+   input wire button,
+   input wire reset,
+   input wire finished,
    output reg signed [10:0] y_out,
    output reg signed [10:0] v_out
-   );
+);
 
 `include "constants.v"
 

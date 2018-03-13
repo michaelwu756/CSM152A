@@ -1,11 +1,9 @@
 module calcScore(
-   input game_clk,
-   input reset,
-   input passColumn,
-   output [9:0] score_out
-   );
-
-reg [9:0] score_out;
+   input wire game_clk,
+   input wire reset,
+   input wire passColumn,
+   output reg [9:0] score_out
+);
 
 always @ (posedge game_clk or posedge reset) begin
    if (reset)

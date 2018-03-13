@@ -1,16 +1,18 @@
 module collisionDetection(
-   input gameClk,
-   input [10:0] Ax, Ay, Bx, By,
-   input [10:0] y_in,
-   input reset,
-   output hitColumn
-   );
+   input wire gameClk,
+   input wire [10:0] Ax,
+   input wire [10:0] Ay,
+   input wire [10:0] Bx,
+   input wire [10:0] By,
+   input wire [10:0] y_in,
+   input wire reset,
+   output reg hitColumn
+);
 
 `include "constants.v"
 
 wire [10:0] Aleft, Bleft, Aright, Bright;
 wire [10:0] Atop, Abottom, Btop, Bbottom;
-reg hitColumn;
 
 assign Atop = Ay + pipe_height_gap;
 assign Abottom = Ay - pipe_height_gap;

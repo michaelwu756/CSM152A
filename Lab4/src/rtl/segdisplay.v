@@ -5,7 +5,7 @@ module segdisplay(
    input wire clr,         //asynchronous reset
    output reg [6:0] seg,   //7-segment display LEDs
    output reg [3:0] an     //7-segment display anode enable
-   );
+);
 
 `include "constants.v"
 
