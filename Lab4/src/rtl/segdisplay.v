@@ -54,16 +54,16 @@ always @(posedge segclk or posedge clr) begin
          end
          SEG_MIDLEFT: begin
             case (wmidleft)
-               1: seg<=DISPLAY_1;
-               2: seg<=DISPLAY_2;
-               3: seg<=DISPLAY_3;
-               4: seg<=DISPLAY_4;
-               5: seg<=DISPLAY_5;
-               6: seg<=DISPLAY_6;
-               7: seg<=DISPLAY_7;
-               8: seg<=DISPLAY_8;
-               9: seg<=DISPLAY_9;
-               0: seg<=DISPLAY_0;
+               1: seg <= DISPLAY_1;
+               2: seg <= DISPLAY_2;
+               3: seg <= DISPLAY_3;
+               4: seg <= DISPLAY_4;
+               5: seg <= DISPLAY_5;
+               6: seg <= DISPLAY_6;
+               7: seg <= DISPLAY_7;
+               8: seg <= DISPLAY_8;
+               9: seg <= DISPLAY_9;
+               0: seg <= DISPLAY_0;
             endcase
             an <= 4'b1011;
             state <= SEG_MIDRIGHT;
