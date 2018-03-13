@@ -28,8 +28,6 @@ reg btnCDownSample;
 reg btnCClicked;
 reg finished;
 
-wire [10:0] bird_v;
-
 wire hitColumn;
 wire passColumn;
 wire [10:0] pipe1_x;
@@ -92,8 +90,7 @@ birdMovement bm(
    .button(btnCClicked),
    .reset(btnR),
    .finished(finished),
-   .y_out(bird_y),
-   .v_out(bird_v)
+   .y_out(bird_y)
 );
 
 columnGen cg(.gameClk(gameclk),
