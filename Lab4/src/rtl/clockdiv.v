@@ -26,7 +26,13 @@ always @(posedge clk or posedge clr) begin
    // increment counter by one
    else begin
       q <= q + 1;
-      if(gc >= GC_TARGET - GC_SCALING_CONSTANT*score)
+      if (GC_SCALING_CONSTANT*score < GC_TARGET) begin
+         if(gc >= GC_TARGET - GC_SCALING_CONSTANT*score)
+            gc <= 0;
+         else
+            gc <= gc + 1;
+      end
+      else if(gc >= GC_SCALING_CONSTANT)
          gc <= 0;
       else
          gc <= gc + 1;
@@ -35,7 +41,7 @@ end
 
 // 100Mhz ÷ 2^18 = 381.47Hz
 assign segclk = q[17];
-assign gameclk = gc == GC_TARGET - GC_SCALING_CONSTANT*score;
+assign gameclk = gc == (GC_SCALING_CONSTANT*score < GC_TARGET) ? GC_TARGET - GC_SCALING_CONSTANT*score : GC_SCALING_CONSTANT;
 // 100Mhz ÷ 2^2 = 25MHz
 assign dclk = q[1];
 

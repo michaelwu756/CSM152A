@@ -12,7 +12,7 @@ module columnGen(
 `include "constants.v"
 
 initial begin
-   Ax = SCREEN_WIDTH/2;
+   Ax = (SCREEN_WIDTH + PIPE_WIDTH)/2;
    Ay = PADDING + PIPE_HEIGHT_GAP + 624%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
    Bx = SCREEN_WIDTH + PIPE_WIDTH;
    By = PADDING + PIPE_HEIGHT_GAP + (2*624)%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
@@ -24,7 +24,7 @@ lfsr rng(gameClk, reset, random);
 reg [14:0] delay = DELAY;
 always @(posedge gameClk or posedge reset) begin
    if (reset) begin
-      Ax <= SCREEN_WIDTH/2;
+      Ax <= (SCREEN_WIDTH + PIPE_WIDTH)/2;
       Ay <= PADDING + PIPE_HEIGHT_GAP + random%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
 
       Bx <= SCREEN_WIDTH + PIPE_WIDTH;
@@ -41,13 +41,13 @@ always @(posedge gameClk or posedge reset) begin
          else
             passColumn <= 0;
          // if first col of Ainfo is 0, generate new column
-         if (Ax == -PIPE_WIDTH) begin
+         if (Ax == 0) begin
             Ax <= SCREEN_WIDTH + PIPE_WIDTH;
             Ay <= PADDING + PIPE_HEIGHT_GAP + random%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
             Bx <= Bx - 1;
          end
          // if first col of Binfo is 0, generate new column
-         else if (Bx == -PIPE_WIDTH) begin
+         else if (Bx == 0) begin
             Bx <= SCREEN_WIDTH + PIPE_WIDTH;
             By <= PADDING + PIPE_HEIGHT_GAP + random%(SCREEN_HEIGHT - 2*(PADDING + PIPE_HEIGHT_GAP));
             Ax <= Ax - 1;
@@ -69,9 +69,10 @@ module lfsr(
 );
 
 always @(posedge clk or posedge reset) begin
-   if (reset)
+   if (reset) begin
       if (q == 0)
          q <= 16'b1001100001010100; // can be anything except zero
+   end
    else
       q <= {q[14:0], q[7] ^ q[5] ^ q[4] ^ q[3]}; // polynomial for maximal LFSR
 end

@@ -13,7 +13,7 @@ parameter PADDING = 40;
 parameter DELAY = 500;
 
 parameter GC_TARGET = 500000;
-parameter GC_SCALING_CONSTANT = 2000;
+parameter GC_SCALING_CONSTANT = 20000;
 
 // video structure constants
 parameter HPIXELS = 800;// horizontal pixels per line
