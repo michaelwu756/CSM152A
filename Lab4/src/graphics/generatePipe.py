@@ -11,15 +11,15 @@ with open('pipe.txt', 'r') as file:
             if (j==0):
                 print 'else if ((vc >= pipe1_min_y - 2 && vc < pipe1_min_y) || (vc >= pipe1_max_y && vc < pipe1_max_y + 2))'
                 print '   showBlack();'
-                print 'else if ((vc >= pipe1_min_y - 4 && vc < pipe1_min_y - 2) || (vc >= pipe1_max_y + 2 && vc < pipe1_max_y + 4))'
+                print 'else if ((vc >= pipe1_min_y - 4 && vc < pipe1_min_y - 2) || (vc >= pipe1_max_y + 2 && vc < pipe1_max_y + 4)) begin'
             elif (j==1):
-                print 'else if ((vc >= pipe1_min_y - 16 && vc < pipe1_min_y - 4) || (vc >= pipe1_max_y + 4 && vc < pipe1_max_y + 16))'
+                print 'else if ((vc >= pipe1_min_y - 16 && vc < pipe1_min_y - 4) || (vc >= pipe1_max_y + 4 && vc < pipe1_max_y + 16)) begin'
             elif (j==2):
-                print 'else if ((vc >= pipe1_min_y - 18 && vc < pipe1_min_y - 16) || (vc >= pipe1_max_y + 16 && vc < pipe1_max_y + 18))'
+                print 'else if ((vc >= pipe1_min_y - 18 && vc < pipe1_min_y - 16) || (vc >= pipe1_max_y + 16 && vc < pipe1_max_y + 18)) begin'
             elif (j==3):
                 print 'else if ((vc >= pipe1_min_y - 20 && vc < pipe1_min_y - 18) || (vc >= pipe1_max_y + 18 && vc < pipe1_max_y + 20))'
                 print '   showBlack();'
-                print 'else if (vc < pipe1_min_y - 18 || vc >= pipe1_max_y + 20)'
+                print 'else if (vc < pipe1_min_y - 18 || vc >= pipe1_max_y + 20) begin'
             firstPrint=True
         if c!='e' and c!='\n':
             if firstPrint:
@@ -38,6 +38,7 @@ with open('pipe.txt', 'r') as file:
             elif c=='b':
                 print '      showBlack();'
         if c=='\n':
+            print 'end'
             i=0
             j=j+1
         else:
@@ -54,15 +55,15 @@ with open('pipe.txt', 'r') as file:
             if (j==0):
                 print 'else if ((vc >= pipe2_min_y - 2 && vc < pipe2_min_y) || (vc >= pipe2_max_y && vc < pipe2_max_y + 2))'
                 print '   showBlack();'
-                print 'else if ((vc >= pipe2_min_y - 4 && vc < pipe2_min_y - 2) || (vc >= pipe2_max_y + 2 && vc < pipe2_max_y + 4))'
+                print 'else if ((vc >= pipe2_min_y - 4 && vc < pipe2_min_y - 2) || (vc >= pipe2_max_y + 2 && vc < pipe2_max_y + 4)) begin'
             elif (j==1):
-                print 'else if ((vc >= pipe2_min_y - 16 && vc < pipe2_min_y - 4) || (vc >= pipe2_max_y + 4 && vc < pipe2_max_y + 16))'
+                print 'else if ((vc >= pipe2_min_y - 16 && vc < pipe2_min_y - 4) || (vc >= pipe2_max_y + 4 && vc < pipe2_max_y + 16)) begin'
             elif (j==2):
-                print 'else if ((vc >= pipe2_min_y - 18 && vc < pipe2_min_y - 16) || (vc >= pipe2_max_y + 16 && vc < pipe2_max_y + 18))'
+                print 'else if ((vc >= pipe2_min_y - 18 && vc < pipe2_min_y - 16) || (vc >= pipe2_max_y + 16 && vc < pipe2_max_y + 18)) begin'
             elif (j==3):
                 print 'else if ((vc >= pipe2_min_y - 20 && vc < pipe2_min_y - 18) || (vc >= pipe2_max_y + 18 && vc < pipe2_max_y + 20))'
                 print '   showBlack();'
-                print 'else if (vc < pipe2_min_y - 18 || vc >= pipe2_max_y + 20)'
+                print 'else if (vc < pipe2_min_y - 18 || vc >= pipe2_max_y + 20) begin'
             firstPrint=True
         if c!='e' and c!='\n':
             if firstPrint:
@@ -81,6 +82,7 @@ with open('pipe.txt', 'r') as file:
             elif c=='b':
                 print '      showBlack();'
         if c=='\n':
+            print 'end'
             i=0
             j=j+1
         else:
