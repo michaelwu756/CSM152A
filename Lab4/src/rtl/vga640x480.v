@@ -69,7 +69,7 @@ assign vsync = (vc < VPULSE) ? 0 : 1;
 
 wire [10:0] pipe1_min_x;
 wire [10:0] pipe1_max_x;
-wire [10:0] pipe1_min_y; 
+wire [10:0] pipe1_min_y;
 wire [10:0] pipe1_max_y;
 assign pipe1_min_x = pipe1_x - PIPE_WIDTH + HBP;
 assign pipe1_max_x = pipe1_x + PIPE_WIDTH + HBP;
@@ -78,7 +78,7 @@ assign pipe1_max_y = pipe1_y + PIPE_HEIGHT_GAP + VBP;
 
 wire [10:0] pipe2_min_x;
 wire [10:0] pipe2_max_x;
-wire [10:0] pipe2_min_y; 
+wire [10:0] pipe2_min_y;
 wire [10:0] pipe2_max_y;
 assign pipe2_min_x = pipe2_x - PIPE_WIDTH + HBP;
 assign pipe2_max_x = pipe2_x + PIPE_WIDTH + HBP;
@@ -86,13 +86,9 @@ assign pipe2_min_y = pipe2_y - PIPE_HEIGHT_GAP + VBP;
 assign pipe2_max_y = pipe2_y + PIPE_HEIGHT_GAP + VBP;
 
 wire [10:0] bird_min_x;
-wire [10:0] bird_max_x;
-wire [10:0] bird_min_y; 
-wire [10:0] bird_max_y;
+wire [10:0] bird_min_y;
 assign bird_min_x = BIRD_X - BIRD_WIDTH + HBP;
-assign bird_max_x = BIRD_X + BIRD_WIDTH + HBP;
 assign bird_min_y = bird_y - BIRD_HEIGHT + VBP;
-assign bird_max_y = bird_y + BIRD_HEIGHT + VBP;
 
 task showBlack;
    begin
