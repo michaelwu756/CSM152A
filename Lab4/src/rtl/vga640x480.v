@@ -1313,9 +1313,9 @@ always @(*) begin
       else if (hc == bird_min_x + 21 && vc == bird_min_y + 22)
          showBlack();
       //display pipes
-      else if ((vc >= pipe1_min_y - 2 && vc < pipe1_min_y) || (vc >= pipe1_max_y && vc < pipe1_max_y + 2))
+      else if (((vc >= pipe1_min_y - 2 && vc < pipe1_min_y) || (vc >= pipe1_max_y && vc < pipe1_max_y + 2)) && (hc >= pipe1_min_x && hc < pipe1_max_x))
          showBlack();
-      else if ((vc >= pipe1_min_y - 4 && vc < pipe1_min_y - 2) || (vc >= pipe1_max_y + 2 && vc < pipe1_max_y + 4)) begin
+      else if (((vc >= pipe1_min_y - 4 && vc < pipe1_min_y - 2) || (vc >= pipe1_max_y + 2 && vc < pipe1_max_y + 4)) && (hc >= pipe1_min_x && hc < pipe1_max_x)) begin
          if (hc == pipe1_min_x + 0)
             showBlack();
          else if (hc == pipe1_min_x + 1)
@@ -1417,7 +1417,7 @@ always @(*) begin
          else if (hc == pipe1_min_x + 49)
             showBlack();
       end
-      else if ((vc >= pipe1_min_y - 16 && vc < pipe1_min_y - 4) || (vc >= pipe1_max_y + 4 && vc < pipe1_max_y + 16)) begin
+      else if (((vc >= pipe1_min_y - 16 && vc < pipe1_min_y - 4) || (vc >= pipe1_max_y + 4 && vc < pipe1_max_y + 16)) && (hc >= pipe1_min_x && hc < pipe1_max_x)) begin
          if (hc == pipe1_min_x + 0)
             showBlack();
          else if (hc == pipe1_min_x + 1)
@@ -1519,7 +1519,7 @@ always @(*) begin
          else if (hc == pipe1_min_x + 49)
             showBlack();
       end
-      else if ((vc >= pipe1_min_y - 18 && vc < pipe1_min_y - 16) || (vc >= pipe1_max_y + 16 && vc < pipe1_max_y + 18)) begin
+      else if (((vc >= pipe1_min_y - 18 && vc < pipe1_min_y - 16) || (vc >= pipe1_max_y + 16 && vc < pipe1_max_y + 18)) && (hc >= pipe1_min_x && hc < pipe1_max_x)) begin
          if (hc == pipe1_min_x + 0)
             showBlack();
          else if (hc == pipe1_min_x + 1)
@@ -1621,9 +1621,9 @@ always @(*) begin
          else if (hc == pipe1_min_x + 49)
             showBlack();
       end
-      else if ((vc >= pipe1_min_y - 20 && vc < pipe1_min_y - 18) || (vc >= pipe1_max_y + 18 && vc < pipe1_max_y + 20))
+      else if (((vc >= pipe1_min_y - 20 && vc < pipe1_min_y - 18) || (vc >= pipe1_max_y + 18 && vc < pipe1_max_y + 20)) && (hc >= pipe1_min_x && hc < pipe1_max_x))
          showBlack();
-      else if (vc < pipe1_min_y - 18 || vc >= pipe1_max_y + 20) begin
+      else if ((vc < pipe1_min_y - 18 || vc >= pipe1_max_y + 20) && (hc >= pipe1_min_x + 2 && hc < pipe1_max_x - 2)) begin
          if (hc == pipe1_min_x + 2)
             showBlack();
          else if (hc == pipe1_min_x + 3)
@@ -1717,9 +1717,9 @@ always @(*) begin
          else if (hc == pipe1_min_x + 47)
             showBlack();
       end
-      else if ((vc >= pipe2_min_y - 2 && vc < pipe2_min_y) || (vc >= pipe2_max_y && vc < pipe2_max_y + 2))
+      else if (((vc >= pipe2_min_y - 2 && vc < pipe2_min_y) || (vc >= pipe2_max_y && vc < pipe2_max_y + 2)) && (hc >= pipe2_min_x && hc < pipe2_max_x))
          showBlack();
-      else if ((vc >= pipe2_min_y - 4 && vc < pipe2_min_y - 2) || (vc >= pipe2_max_y + 2 && vc < pipe2_max_y + 4)) begin
+      else if (((vc >= pipe2_min_y - 4 && vc < pipe2_min_y - 2) || (vc >= pipe2_max_y + 2 && vc < pipe2_max_y + 4)) && (hc >= pipe2_min_x && hc < pipe2_max_x)) begin
          if (hc == pipe2_min_x + 0)
             showBlack();
          else if (hc == pipe2_min_x + 1)
@@ -1821,7 +1821,7 @@ always @(*) begin
          else if (hc == pipe2_min_x + 49)
             showBlack();
       end
-      else if ((vc >= pipe2_min_y - 16 && vc < pipe2_min_y - 4) || (vc >= pipe2_max_y + 4 && vc < pipe2_max_y + 16)) begin
+      else if (((vc >= pipe2_min_y - 16 && vc < pipe2_min_y - 4) || (vc >= pipe2_max_y + 4 && vc < pipe2_max_y + 16)) && (hc >= pipe2_min_x && hc < pipe2_max_x)) begin
          if (hc == pipe2_min_x + 0)
             showBlack();
          else if (hc == pipe2_min_x + 1)
@@ -1923,7 +1923,7 @@ always @(*) begin
          else if (hc == pipe2_min_x + 49)
             showBlack();
       end
-      else if ((vc >= pipe2_min_y - 18 && vc < pipe2_min_y - 16) || (vc >= pipe2_max_y + 16 && vc < pipe2_max_y + 18)) begin
+      else if (((vc >= pipe2_min_y - 18 && vc < pipe2_min_y - 16) || (vc >= pipe2_max_y + 16 && vc < pipe2_max_y + 18)) && (hc >= pipe2_min_x && hc < pipe2_max_x)) begin
          if (hc == pipe2_min_x + 0)
             showBlack();
          else if (hc == pipe2_min_x + 1)
@@ -2025,9 +2025,9 @@ always @(*) begin
          else if (hc == pipe2_min_x + 49)
             showBlack();
       end
-      else if ((vc >= pipe2_min_y - 20 && vc < pipe2_min_y - 18) || (vc >= pipe2_max_y + 18 && vc < pipe2_max_y + 20))
+      else if (((vc >= pipe2_min_y - 20 && vc < pipe2_min_y - 18) || (vc >= pipe2_max_y + 18 && vc < pipe2_max_y + 20)) && (hc >= pipe2_min_x && hc < pipe2_max_x))
          showBlack();
-      else if (vc < pipe2_min_y - 18 || vc >= pipe2_max_y + 20) begin
+      else if ((vc < pipe2_min_y - 18 || vc >= pipe2_max_y + 20) && (hc >= pipe2_min_x + 2 && hc < pipe2_max_x - 2)) begin
          if (hc == pipe2_min_x + 2)
             showBlack();
          else if (hc == pipe2_min_x + 3)
