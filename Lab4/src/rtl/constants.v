@@ -9,7 +9,7 @@ parameter MAX_VELOCITY = 64;
 parameter Y_INIT = 200;
 parameter SCREEN_HEIGHT = 480;
 parameter SCREEN_WIDTH = 640;
-parameter PADDING = 20;
+parameter PADDING = 40;
 parameter DELAY = 500;
 
 parameter GC_TARGET = 500000;
