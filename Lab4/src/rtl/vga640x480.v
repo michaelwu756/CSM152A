@@ -144,9 +144,8 @@ always @(*) begin
          blue = 2'b00;
       end
       //display bird
-      else if (hc == bird_min_x + 7 && vc == bird_min_y + 0) begin
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 0)
          showBlack();
-      end
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 0)
          showBlack();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 0)
