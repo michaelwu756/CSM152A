@@ -144,128 +144,172 @@ always @(*) begin
          blue = 2'b00;
       end
       //display bird
-      else if (hc == bird_min_x + 7 && vc == bird_min_y + 0)
-         showBlack();
-      else if (hc == bird_min_x + 8 && vc == bird_min_y + 0)
-         showBlack();
-      else if (hc == bird_min_x + 9 && vc == bird_min_y + 0)
-         showBlack();
-      else if (hc == bird_min_x + 10 && vc == bird_min_y + 0)
-         showBlack();
-      else if (hc == bird_min_x + 11 && vc == bird_min_y + 0)
-         showBlack();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 0)
          showBlack();
-      else if (hc == bird_min_x + 5 && vc == bird_min_y + 1)
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 0)
          showBlack();
-      else if (hc == bird_min_x + 6 && vc == bird_min_y + 1)
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 0)
          showBlack();
-      else if (hc == bird_min_x + 7 && vc == bird_min_y + 1)
-         showYellow1();
-      else if (hc == bird_min_x + 8 && vc == bird_min_y + 1)
-         showYellow1();
-      else if (hc == bird_min_x + 9 && vc == bird_min_y + 1)
-         showYellow1();
-      else if (hc == bird_min_x + 10 && vc == bird_min_y + 1)
-         showYellow1();
-      else if (hc == bird_min_x + 11 && vc == bird_min_y + 1)
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 0)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 0)
          showBlack();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 1)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 1)
          showBlack();
-      else if (hc == bird_min_x + 4 && vc == bird_min_y + 2)
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 1)
          showBlack();
-      else if (hc == bird_min_x + 5 && vc == bird_min_y + 2)
-         showYellow1();
-      else if (hc == bird_min_x + 6 && vc == bird_min_y + 2)
-         showYellow1();
-      else if (hc == bird_min_x + 7 && vc == bird_min_y + 2)
-         showYellow1();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 1)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 1)
+         showBlack();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 2)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 2)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 2)
          showBlack();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 2)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 2)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 2)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 2)
-         showBlack();
-      else if (hc == bird_min_x + 2 && vc == bird_min_y + 3)
-         showBlack();
-      else if (hc == bird_min_x + 3 && vc == bird_min_y + 3)
-         showBlack();
-      else if (hc == bird_min_x + 4 && vc == bird_min_y + 3)
-         showBlack();
-      else if (hc == bird_min_x + 5 && vc == bird_min_y + 3)
-         showBlack();
-      else if (hc == bird_min_x + 6 && vc == bird_min_y + 3)
          showYellow1();
-      else if (hc == bird_min_x + 7 && vc == bird_min_y + 3)
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 2)
          showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 2)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 2)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 2)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 2)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 2)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 2)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 2)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 2)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 2)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 2)
+         showBlack();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 3)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 3)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 3)
          showBlack();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 3)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 3)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 3)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 3)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 3)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 3)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 3)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 3)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 3)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 3)
          showBlack();
-      else if (hc == bird_min_x + 1 && vc == bird_min_y + 4)
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 3)
          showBlack();
-      else if (hc == bird_min_x + 2 && vc == bird_min_y + 4)
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 3)
          showWhite();
-      else if (hc == bird_min_x + 3 && vc == bird_min_y + 4)
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 3)
          showWhite();
-      else if (hc == bird_min_x + 4 && vc == bird_min_y + 4)
-         showWhite();
-      else if (hc == bird_min_x + 5 && vc == bird_min_y + 4)
-         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 3)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 3)
+         showBlack();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 4)
          showBlack();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 4)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 4)
          showYellow1();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 4)
          showYellow1();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 4)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 4)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 4)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 4)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 4)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 4)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 4)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 4)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 4)
          showBlack();
-      else if (hc == bird_min_x + 1 && vc == bird_min_y + 5)
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 4)
          showBlack();
-      else if (hc == bird_min_x + 2 && vc == bird_min_y + 5)
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 4)
          showWhite();
-      else if (hc == bird_min_x + 3 && vc == bird_min_y + 5)
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 4)
          showWhite();
-      else if (hc == bird_min_x + 4 && vc == bird_min_y + 5)
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 4)
          showWhite();
-      else if (hc == bird_min_x + 5 && vc == bird_min_y + 5)
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 4)
          showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 4)
+         showWhite();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 4)
+         showWhite();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 4)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 4)
+         showBlack();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 5)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 5)
          showBlack();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 5)
@@ -275,160 +319,958 @@ always @(*) begin
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 5)
          showYellow1();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 5)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 5)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 5)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 5)
-         showWhite();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 5)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 5)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 5)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 5)
          showBlack();
-      else if (hc == bird_min_x + 1 && vc == bird_min_y + 6)
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 5)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 5)
+         showWhite();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 5)
+         showWhite();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 5)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 5)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 5)
+         showWhite();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 5)
+         showWhite();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 5)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 5)
          showBlack();
       else if (hc == bird_min_x + 2 && vc == bird_min_y + 6)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 3 && vc == bird_min_y + 6)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 4 && vc == bird_min_y + 6)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 5 && vc == bird_min_y + 6)
-         showWhite();
+         showBlack();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 6)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 6)
          showBlack();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 6)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 6)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 6)
          showYellow1();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 6)
          showYellow1();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 6)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 6)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 6)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 6)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 16 && vc == bird_min_y + 6)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 6)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 6)
+         showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 6)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 6)
+         showWhite();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 6)
+         showWhite();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 6)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 6)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 6)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 6)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 6)
+         showWhite();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 6)
+         showWhite();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 6)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 6)
          showBlack();
       else if (hc == bird_min_x + 2 && vc == bird_min_y + 7)
          showBlack();
       else if (hc == bird_min_x + 3 && vc == bird_min_y + 7)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 4 && vc == bird_min_y + 7)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 5 && vc == bird_min_y + 7)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 7)
          showBlack();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 7)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 7)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 7)
-         showYellow1();
+         showBlack();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 7)
          showYellow1();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 7)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 7)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 7)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 7)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 7)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 16 && vc == bird_min_y + 7)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 17 && vc == bird_min_y + 7)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 7)
          showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 7)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 7)
+         showWhite();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 7)
+         showWhite();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 7)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 7)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 7)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 7)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 7)
+         showWhite();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 7)
+         showWhite();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 7)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 7)
+         showBlack();
+      else if (hc == bird_min_x + 0 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 8)
+         showWhite();
       else if (hc == bird_min_x + 3 && vc == bird_min_y + 8)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 4 && vc == bird_min_y + 8)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 5 && vc == bird_min_y + 8)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 8)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 8)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 8)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 8)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 8)
          showBlack();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 8)
-         showOrange();
+         showBlack();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 8)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 8)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 8)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 8)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 16 && vc == bird_min_y + 8)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 8)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 8)
          showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 8)
+         showWhite();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 8)
+         showWhite();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 8)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 8)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 8)
+         showWhite();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 8)
+         showWhite();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 8)
+         showBlack();
+      else if (hc == bird_min_x + 0 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 9)
+         showWhite();
       else if (hc == bird_min_x + 5 && vc == bird_min_y + 9)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 9)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 9)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 9)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 9)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 9)
-         showYellow2();
+         showBlack();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 9)
          showBlack();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 9)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 9)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 9)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 9)
-         showOrange();
+         showYellow1();
       else if (hc == bird_min_x + 16 && vc == bird_min_y + 9)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 9)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 9)
          showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 9)
+         showWhite();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 9)
+         showBlack();
+      else if (hc == bird_min_x + 0 && vc == bird_min_y + 10)
+         showBlack();
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 10)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 10)
+         showWhite();
       else if (hc == bird_min_x + 6 && vc == bird_min_y + 10)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 7 && vc == bird_min_y + 10)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 10)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 10)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 10)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 10)
-         showYellow2();
+         showWhite();
       else if (hc == bird_min_x + 12 && vc == bird_min_y + 10)
          showBlack();
       else if (hc == bird_min_x + 13 && vc == bird_min_y + 10)
          showBlack();
       else if (hc == bird_min_x + 14 && vc == bird_min_y + 10)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 15 && vc == bird_min_y + 10)
-         showBlack();
+         showYellow1();
       else if (hc == bird_min_x + 16 && vc == bird_min_y + 10)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 10)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 10)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 10)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 10)
          showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 10)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 10)
+         showWhite();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 10)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 10)
+         showBlack();
+      else if (hc == bird_min_x + 0 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 11)
+         showWhite();
       else if (hc == bird_min_x + 8 && vc == bird_min_y + 11)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 9 && vc == bird_min_y + 11)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 10 && vc == bird_min_y + 11)
-         showBlack();
+         showWhite();
       else if (hc == bird_min_x + 11 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 11)
+         showYellow1();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 11)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 11)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 11)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 11)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 11)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 11)
+         showWhite();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 11)
+         showBlack();
+      else if (hc == bird_min_x + 0 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 12)
+         showWhite();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 12)
+         showWhite();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 12)
+         showWhite();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 12)
+         showWhite();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 12)
+         showWhite();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 12)
+         showWhite();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 12)
+         showYellow1();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 12)
+         showBlack();
+      else if (hc == bird_min_x + 0 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 1 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 13)
+         showWhite();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 13)
+         showWhite();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 13)
+         showWhite();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 13)
+         showWhite();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 13)
+         showWhite();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 13)
+         showWhite();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 13)
+         showYellow1();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 13)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 14)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 14)
+         showOrange();
+      else if (hc == bird_min_x + 32 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 33 && vc == bird_min_y + 14)
+         showBlack();
+      else if (hc == bird_min_x + 2 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 3 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 15)
+         showYellow1();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 15)
+         showOrange();
+      else if (hc == bird_min_x + 32 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 33 && vc == bird_min_y + 15)
+         showBlack();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 16)
+         showYellow2();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 16)
+         showOrange();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 16)
+         showOrange();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 16)
+         showBlack();
+      else if (hc == bird_min_x + 4 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 5 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 6 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 7 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 17)
+         showYellow2();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 17)
+         showOrange();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 17)
+         showOrange();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 17)
+         showBlack();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 18)
+         showBlack();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 18)
+         showBlack();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 18)
+         showYellow2();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 18)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 18)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 18)
+         showOrange();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 18)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 18)
+         showBlack();
+      else if (hc == bird_min_x + 8 && vc == bird_min_y + 19)
+         showBlack();
+      else if (hc == bird_min_x + 9 && vc == bird_min_y + 19)
+         showBlack();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 19)
+         showYellow2();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 19)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 19)
+         showBlack();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 19)
+         showOrange();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 19)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 19)
+         showBlack();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 20)
+         showYellow2();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 20)
+         showBlack();
+      else if (hc == bird_min_x + 10 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 11 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 12 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 13 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 21)
+         showYellow2();
+      else if (hc == bird_min_x + 22 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 23 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 24 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 25 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 26 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 27 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 28 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 29 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 30 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 31 && vc == bird_min_y + 21)
+         showBlack();
+      else if (hc == bird_min_x + 14 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 15 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 16 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 17 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 18 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 19 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 20 && vc == bird_min_y + 22)
+         showBlack();
+      else if (hc == bird_min_x + 21 && vc == bird_min_y + 22)
          showBlack();
       //display pipes
       else if (hc >= pipe1_min_x && hc < pipe1_max_x &&
