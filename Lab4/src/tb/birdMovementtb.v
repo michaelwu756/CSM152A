@@ -32,7 +32,6 @@ module birdmivementtb;
 
 	// Outputs
 	wire [10:0] y_out;
-	wire [10:0] v_out;
 
 	// Instantiate the Unit Under Test (UUT)
 	birdMovement uut (
@@ -40,8 +39,7 @@ module birdmivementtb;
 		.button(button), 
 		.reset(reset), 
 		.finished(finished), 
-		.y_out(y_out), 
-		.v_out(v_out)
+		.y_out(y_out)
 	);
 	
 	reg [50:0] count;
