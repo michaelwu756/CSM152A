@@ -44,8 +44,28 @@ parameter WHITE_G = 3'b111;
 parameter WHITE_B = 2'b11;
 
 parameter ORANGE_R = 3'b111;
-parameter ORANGE_G = 3'b100;
+parameter ORANGE_G = 3'b011;
 parameter ORANGE_B = 2'b00;
+
+parameter LIGHT_GREEN_R = 3'b101;
+parameter LIGHT_GREEN_G = 3'b111;
+parameter LIGHT_GREEN_B = 2'b01;
+
+parameter MEDIUM_GREEN_R = 3'b011;
+parameter MEDIUM_GREEN_G = 3'b111;
+parameter MEDIUM_GREEN_B = 2'b01;
+
+parameter GREEN_R = 3'b000;
+parameter GREEN_G = 3'b111;
+parameter GREEN_B = 2'b00;
+
+parameter DARK_GREEN_R = 3'b000;
+parameter DARK_GREEN_G = 3'b101;
+parameter DARK_GREEN_B = 2'b00;
+
+parameter BACKGROUND_R = 3'b011;
+parameter BACKGROUND_G = 3'b110;
+parameter BACKGROUND_B = 2'b11;
 
 // constants for displaying letters on 7-segment display
 parameter SEG_LEFT = 2'b00;
