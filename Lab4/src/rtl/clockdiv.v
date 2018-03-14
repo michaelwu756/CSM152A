@@ -41,7 +41,7 @@ end
 
 // 100Mhz ÷ 2^18 = 381.47Hz
 assign segclk = q[17];
-assign gameclk = gc == (GC_SCALING_CONSTANT*score < GC_TARGET) ? GC_TARGET - GC_SCALING_CONSTANT*score : GC_SCALING_CONSTANT;
+assign gameclk = (GC_SCALING_CONSTANT*score < GC_TARGET) ? gc ==  GC_TARGET - GC_SCALING_CONSTANT*score : gc == GC_SCALING_CONSTANT;
 // 100Mhz ÷ 2^2 = 25MHz
 assign dclk = q[1];
 
