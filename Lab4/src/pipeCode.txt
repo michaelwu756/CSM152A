@@ -1,0 +1,800 @@
+else if ((vc >= pipe1_min_y - 2 && vc < pipe1_min_y) || (vc >= pipe1_max_y && vc < pipe1_max_y + 2))
+   showBlack();
+else if ((vc >= pipe1_min_y - 4 && vc < pipe1_min_y - 2) || (vc >= pipe1_max_y + 2 && vc < pipe1_max_y + 4))
+   if (hc == pipe1_min_x + 0)
+      showBlack();
+   else if (hc == pipe1_min_x + 1)
+      showBlack();
+   else if (hc == pipe1_min_x + 2)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 3)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 4)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 5)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 6)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 7)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 8)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 9)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 10)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 11)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 12)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 13)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 14)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 15)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 16)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 17)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 18)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 19)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 20)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 21)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 22)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 23)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 24)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 25)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 26)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 27)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 28)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 29)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 30)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 31)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 32)
+      showGreen();
+   else if (hc == pipe1_min_x + 33)
+      showGreen();
+   else if (hc == pipe1_min_x + 34)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 35)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 36)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 37)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 38)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 39)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 40)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 41)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 42)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 43)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 44)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 45)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 46)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 47)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 48)
+      showBlack();
+   else if (hc == pipe1_min_x + 49)
+      showBlack();
+else if ((vc >= pipe1_min_y - 16 && vc < pipe1_min_y - 4) || (vc >= pipe1_max_y + 4 && vc < pipe1_max_y + 16))
+   if (hc == pipe1_min_x + 0)
+      showBlack();
+   else if (hc == pipe1_min_x + 1)
+      showBlack();
+   else if (hc == pipe1_min_x + 2)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 3)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 4)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 5)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 6)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 7)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 8)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 9)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 10)
+      showGreen();
+   else if (hc == pipe1_min_x + 11)
+      showGreen();
+   else if (hc == pipe1_min_x + 12)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 13)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 14)
+      showGreen();
+   else if (hc == pipe1_min_x + 15)
+      showGreen();
+   else if (hc == pipe1_min_x + 16)
+      showGreen();
+   else if (hc == pipe1_min_x + 17)
+      showGreen();
+   else if (hc == pipe1_min_x + 18)
+      showGreen();
+   else if (hc == pipe1_min_x + 19)
+      showGreen();
+   else if (hc == pipe1_min_x + 20)
+      showGreen();
+   else if (hc == pipe1_min_x + 21)
+      showGreen();
+   else if (hc == pipe1_min_x + 22)
+      showGreen();
+   else if (hc == pipe1_min_x + 23)
+      showGreen();
+   else if (hc == pipe1_min_x + 24)
+      showGreen();
+   else if (hc == pipe1_min_x + 25)
+      showGreen();
+   else if (hc == pipe1_min_x + 26)
+      showGreen();
+   else if (hc == pipe1_min_x + 27)
+      showGreen();
+   else if (hc == pipe1_min_x + 28)
+      showGreen();
+   else if (hc == pipe1_min_x + 29)
+      showGreen();
+   else if (hc == pipe1_min_x + 30)
+      showGreen();
+   else if (hc == pipe1_min_x + 31)
+      showGreen();
+   else if (hc == pipe1_min_x + 32)
+      showGreen();
+   else if (hc == pipe1_min_x + 33)
+      showGreen();
+   else if (hc == pipe1_min_x + 34)
+      showGreen();
+   else if (hc == pipe1_min_x + 35)
+      showGreen();
+   else if (hc == pipe1_min_x + 36)
+      showGreen();
+   else if (hc == pipe1_min_x + 37)
+      showGreen();
+   else if (hc == pipe1_min_x + 38)
+      showGreen();
+   else if (hc == pipe1_min_x + 39)
+      showGreen();
+   else if (hc == pipe1_min_x + 40)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 41)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 42)
+      showGreen();
+   else if (hc == pipe1_min_x + 43)
+      showGreen();
+   else if (hc == pipe1_min_x + 44)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 45)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 46)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 47)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 48)
+      showBlack();
+   else if (hc == pipe1_min_x + 49)
+      showBlack();
+else if ((vc >= pipe1_min_y - 18 && vc < pipe1_min_y - 16) || (vc >= pipe1_max_y + 16 && vc < pipe1_max_y + 18))
+   if (hc == pipe1_min_x + 0)
+      showBlack();
+   else if (hc == pipe1_min_x + 1)
+      showBlack();
+   else if (hc == pipe1_min_x + 2)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 3)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 4)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 5)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 6)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 7)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 8)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 9)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 10)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 11)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 12)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 13)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 14)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 15)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 16)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 17)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 18)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 19)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 20)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 21)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 22)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 23)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 24)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 25)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 26)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 27)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 28)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 29)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 30)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 31)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 32)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 33)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 34)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 35)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 36)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 37)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 38)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 39)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 40)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 41)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 42)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 43)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 44)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 45)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 46)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 47)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 48)
+      showBlack();
+   else if (hc == pipe1_min_x + 49)
+      showBlack();
+else if ((vc >= pipe1_min_y - 20 && vc < pipe1_min_y - 18) || (vc >= pipe1_max_y + 18 && vc < pipe1_max_y + 20))
+   showBlack();
+else if (vc < pipe1_min_y - 18 || vc >= pipe1_max_y + 20)
+   if (hc == pipe1_min_x + 2)
+      showBlack();
+   else if (hc == pipe1_min_x + 3)
+      showBlack();
+   else if (hc == pipe1_min_x + 4)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 5)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 6)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 7)
+      showLightGreen();
+   else if (hc == pipe1_min_x + 8)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 9)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 10)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 11)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 12)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 13)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 14)
+      showGreen();
+   else if (hc == pipe1_min_x + 15)
+      showGreen();
+   else if (hc == pipe1_min_x + 16)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 17)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 18)
+      showGreen();
+   else if (hc == pipe1_min_x + 19)
+      showGreen();
+   else if (hc == pipe1_min_x + 20)
+      showGreen();
+   else if (hc == pipe1_min_x + 21)
+      showGreen();
+   else if (hc == pipe1_min_x + 22)
+      showGreen();
+   else if (hc == pipe1_min_x + 23)
+      showGreen();
+   else if (hc == pipe1_min_x + 24)
+      showGreen();
+   else if (hc == pipe1_min_x + 25)
+      showGreen();
+   else if (hc == pipe1_min_x + 26)
+      showGreen();
+   else if (hc == pipe1_min_x + 27)
+      showGreen();
+   else if (hc == pipe1_min_x + 28)
+      showGreen();
+   else if (hc == pipe1_min_x + 29)
+      showGreen();
+   else if (hc == pipe1_min_x + 30)
+      showGreen();
+   else if (hc == pipe1_min_x + 31)
+      showGreen();
+   else if (hc == pipe1_min_x + 32)
+      showGreen();
+   else if (hc == pipe1_min_x + 33)
+      showGreen();
+   else if (hc == pipe1_min_x + 34)
+      showGreen();
+   else if (hc == pipe1_min_x + 35)
+      showGreen();
+   else if (hc == pipe1_min_x + 36)
+      showGreen();
+   else if (hc == pipe1_min_x + 37)
+      showGreen();
+   else if (hc == pipe1_min_x + 38)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 39)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 40)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 41)
+      showMediumGreen();
+   else if (hc == pipe1_min_x + 42)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 43)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 44)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 45)
+      showDarkGreen();
+   else if (hc == pipe1_min_x + 46)
+      showBlack();
+   else if (hc == pipe1_min_x + 47)
+      showBlack();
+else if ((vc >= pipe2_min_y - 2 && vc < pipe2_min_y) || (vc >= pipe2_max_y && vc < pipe2_max_y + 2))
+   showBlack();
+else if ((vc >= pipe2_min_y - 4 && vc < pipe2_min_y - 2) || (vc >= pipe2_max_y + 2 && vc < pipe2_max_y + 4))
+   if (hc == pipe2_min_x + 0)
+      showBlack();
+   else if (hc == pipe2_min_x + 1)
+      showBlack();
+   else if (hc == pipe2_min_x + 2)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 3)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 4)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 5)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 6)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 7)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 8)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 9)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 10)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 11)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 12)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 13)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 14)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 15)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 16)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 17)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 18)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 19)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 20)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 21)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 22)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 23)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 24)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 25)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 26)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 27)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 28)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 29)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 30)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 31)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 32)
+      showGreen();
+   else if (hc == pipe2_min_x + 33)
+      showGreen();
+   else if (hc == pipe2_min_x + 34)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 35)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 36)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 37)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 38)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 39)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 40)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 41)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 42)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 43)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 44)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 45)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 46)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 47)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 48)
+      showBlack();
+   else if (hc == pipe2_min_x + 49)
+      showBlack();
+else if ((vc >= pipe2_min_y - 16 && vc < pipe2_min_y - 4) || (vc >= pipe2_max_y + 4 && vc < pipe2_max_y + 16))
+   if (hc == pipe2_min_x + 0)
+      showBlack();
+   else if (hc == pipe2_min_x + 1)
+      showBlack();
+   else if (hc == pipe2_min_x + 2)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 3)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 4)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 5)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 6)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 7)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 8)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 9)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 10)
+      showGreen();
+   else if (hc == pipe2_min_x + 11)
+      showGreen();
+   else if (hc == pipe2_min_x + 12)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 13)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 14)
+      showGreen();
+   else if (hc == pipe2_min_x + 15)
+      showGreen();
+   else if (hc == pipe2_min_x + 16)
+      showGreen();
+   else if (hc == pipe2_min_x + 17)
+      showGreen();
+   else if (hc == pipe2_min_x + 18)
+      showGreen();
+   else if (hc == pipe2_min_x + 19)
+      showGreen();
+   else if (hc == pipe2_min_x + 20)
+      showGreen();
+   else if (hc == pipe2_min_x + 21)
+      showGreen();
+   else if (hc == pipe2_min_x + 22)
+      showGreen();
+   else if (hc == pipe2_min_x + 23)
+      showGreen();
+   else if (hc == pipe2_min_x + 24)
+      showGreen();
+   else if (hc == pipe2_min_x + 25)
+      showGreen();
+   else if (hc == pipe2_min_x + 26)
+      showGreen();
+   else if (hc == pipe2_min_x + 27)
+      showGreen();
+   else if (hc == pipe2_min_x + 28)
+      showGreen();
+   else if (hc == pipe2_min_x + 29)
+      showGreen();
+   else if (hc == pipe2_min_x + 30)
+      showGreen();
+   else if (hc == pipe2_min_x + 31)
+      showGreen();
+   else if (hc == pipe2_min_x + 32)
+      showGreen();
+   else if (hc == pipe2_min_x + 33)
+      showGreen();
+   else if (hc == pipe2_min_x + 34)
+      showGreen();
+   else if (hc == pipe2_min_x + 35)
+      showGreen();
+   else if (hc == pipe2_min_x + 36)
+      showGreen();
+   else if (hc == pipe2_min_x + 37)
+      showGreen();
+   else if (hc == pipe2_min_x + 38)
+      showGreen();
+   else if (hc == pipe2_min_x + 39)
+      showGreen();
+   else if (hc == pipe2_min_x + 40)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 41)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 42)
+      showGreen();
+   else if (hc == pipe2_min_x + 43)
+      showGreen();
+   else if (hc == pipe2_min_x + 44)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 45)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 46)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 47)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 48)
+      showBlack();
+   else if (hc == pipe2_min_x + 49)
+      showBlack();
+else if ((vc >= pipe2_min_y - 18 && vc < pipe2_min_y - 16) || (vc >= pipe2_max_y + 16 && vc < pipe2_max_y + 18))
+   if (hc == pipe2_min_x + 0)
+      showBlack();
+   else if (hc == pipe2_min_x + 1)
+      showBlack();
+   else if (hc == pipe2_min_x + 2)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 3)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 4)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 5)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 6)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 7)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 8)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 9)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 10)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 11)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 12)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 13)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 14)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 15)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 16)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 17)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 18)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 19)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 20)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 21)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 22)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 23)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 24)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 25)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 26)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 27)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 28)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 29)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 30)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 31)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 32)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 33)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 34)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 35)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 36)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 37)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 38)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 39)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 40)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 41)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 42)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 43)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 44)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 45)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 46)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 47)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 48)
+      showBlack();
+   else if (hc == pipe2_min_x + 49)
+      showBlack();
+else if ((vc >= pipe2_min_y - 20 && vc < pipe2_min_y - 18) || (vc >= pipe2_max_y + 18 && vc < pipe2_max_y + 20))
+   showBlack();
+else if (vc < pipe2_min_y - 18 || vc >= pipe2_max_y + 20)
+   if (hc == pipe2_min_x + 2)
+      showBlack();
+   else if (hc == pipe2_min_x + 3)
+      showBlack();
+   else if (hc == pipe2_min_x + 4)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 5)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 6)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 7)
+      showLightGreen();
+   else if (hc == pipe2_min_x + 8)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 9)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 10)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 11)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 12)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 13)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 14)
+      showGreen();
+   else if (hc == pipe2_min_x + 15)
+      showGreen();
+   else if (hc == pipe2_min_x + 16)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 17)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 18)
+      showGreen();
+   else if (hc == pipe2_min_x + 19)
+      showGreen();
+   else if (hc == pipe2_min_x + 20)
+      showGreen();
+   else if (hc == pipe2_min_x + 21)
+      showGreen();
+   else if (hc == pipe2_min_x + 22)
+      showGreen();
+   else if (hc == pipe2_min_x + 23)
+      showGreen();
+   else if (hc == pipe2_min_x + 24)
+      showGreen();
+   else if (hc == pipe2_min_x + 25)
+      showGreen();
+   else if (hc == pipe2_min_x + 26)
+      showGreen();
+   else if (hc == pipe2_min_x + 27)
+      showGreen();
+   else if (hc == pipe2_min_x + 28)
+      showGreen();
+   else if (hc == pipe2_min_x + 29)
+      showGreen();
+   else if (hc == pipe2_min_x + 30)
+      showGreen();
+   else if (hc == pipe2_min_x + 31)
+      showGreen();
+   else if (hc == pipe2_min_x + 32)
+      showGreen();
+   else if (hc == pipe2_min_x + 33)
+      showGreen();
+   else if (hc == pipe2_min_x + 34)
+      showGreen();
+   else if (hc == pipe2_min_x + 35)
+      showGreen();
+   else if (hc == pipe2_min_x + 36)
+      showGreen();
+   else if (hc == pipe2_min_x + 37)
+      showGreen();
+   else if (hc == pipe2_min_x + 38)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 39)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 40)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 41)
+      showMediumGreen();
+   else if (hc == pipe2_min_x + 42)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 43)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 44)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 45)
+      showDarkGreen();
+   else if (hc == pipe2_min_x + 46)
+      showBlack();
+   else if (hc == pipe2_min_x + 47)
+      showBlack();
